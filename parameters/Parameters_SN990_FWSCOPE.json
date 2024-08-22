@@ -1,0 +1,765 @@
+{
+  "FW": "SCOPE",
+  "ModuleID": "0",
+  "SN": "990",
+  "URL": "dig1://caen.internal/usb?link_num=0",
+  "channel_parameters": {
+    "0": {
+      "ch_couple_trg_mode": {
+        "allowed_values": [
+          "COUPLE_TRG_MODE_AND",
+          "COUPLE_TRG_MODE_EVEN_ONLY",
+          "COUPLE_TRG_MODE_ODD_ONLY",
+          "COUPLE_TRG_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG mode",
+        "path": "/ch/0/par/ch_couple_trg_mode",
+        "value": "COUPLE_TRG_MODE_OR"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/0/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/0/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/0/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/0/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/0/par/ch_threshold",
+        "value": "0"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/0/par/ch_trg_global_gen",
+        "value": "TRUE"
+      }
+    },
+    "1": {
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/1/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/1/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/1/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/1/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/1/par/ch_threshold",
+        "value": "0"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/1/par/ch_trg_global_gen",
+        "value": "TRUE"
+      }
+    },
+    "2": {
+      "ch_couple_trg_mode": {
+        "allowed_values": [
+          "COUPLE_TRG_MODE_AND",
+          "COUPLE_TRG_MODE_EVEN_ONLY",
+          "COUPLE_TRG_MODE_ODD_ONLY",
+          "COUPLE_TRG_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG mode",
+        "path": "/ch/2/par/ch_couple_trg_mode",
+        "value": "COUPLE_TRG_MODE_OR"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/2/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/2/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/2/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/2/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/2/par/ch_threshold",
+        "value": "0"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/2/par/ch_trg_global_gen",
+        "value": "TRUE"
+      }
+    },
+    "3": {
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/3/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/3/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/3/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/3/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/3/par/ch_threshold",
+        "value": "0"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/3/par/ch_trg_global_gen",
+        "value": "TRUE"
+      }
+    },
+    "4": {
+      "ch_couple_trg_mode": {
+        "allowed_values": [
+          "COUPLE_TRG_MODE_AND",
+          "COUPLE_TRG_MODE_EVEN_ONLY",
+          "COUPLE_TRG_MODE_ODD_ONLY",
+          "COUPLE_TRG_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG mode",
+        "path": "/ch/4/par/ch_couple_trg_mode",
+        "value": "COUPLE_TRG_MODE_OR"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/4/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/4/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/4/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/4/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/4/par/ch_threshold",
+        "value": "0"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/4/par/ch_trg_global_gen",
+        "value": "TRUE"
+      }
+    },
+    "5": {
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/5/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/5/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/5/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/5/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/5/par/ch_threshold",
+        "value": "0"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/5/par/ch_trg_global_gen",
+        "value": "TRUE"
+      }
+    },
+    "6": {
+      "ch_couple_trg_mode": {
+        "allowed_values": [
+          "COUPLE_TRG_MODE_AND",
+          "COUPLE_TRG_MODE_EVEN_ONLY",
+          "COUPLE_TRG_MODE_ODD_ONLY",
+          "COUPLE_TRG_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG mode",
+        "path": "/ch/6/par/ch_couple_trg_mode",
+        "value": "COUPLE_TRG_MODE_OR"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/6/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/6/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/6/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/6/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/6/par/ch_threshold",
+        "value": "0"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/6/par/ch_trg_global_gen",
+        "value": "TRUE"
+      }
+    },
+    "7": {
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/7/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/7/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/7/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/7/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/7/par/ch_threshold",
+        "value": "0"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/7/par/ch_trg_global_gen",
+        "value": "TRUE"
+      }
+    }
+  },
+  "module_parameters": {
+    "dt_ext_clock": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "DT External clock source",
+      "path": "/par/dt_ext_clock",
+      "value": "FALSE"
+    },
+    "extras_opt": {
+      "allowed_values": [
+        "EXTRAS_OPT_TRG_SOURCE",
+        "EXTRAS_OPT_TT48"
+      ],
+      "data_type": "string",
+      "description": "Standard FW extras option",
+      "path": "/par/extras_opt",
+      "value": "EXTRAS_OPT_TRG_SOURCE"
+    },
+    "iolevel": {
+      "allowed_values": [
+        "FPIOTYPE_NIM",
+        "FPIOTYPE_TTL"
+      ],
+      "data_type": "string",
+      "description": "I/O Level",
+      "path": "/par/iolevel",
+      "value": "FPIOTYPE_NIM"
+    },
+    "out_selection": {
+      "allowed_values": [
+        "OUT_PROPAGATION_LEVEL0",
+        "OUT_PROPAGATION_LEVEL1",
+        "OUT_PROPAGATION_TRIGGER",
+        "OUT_PROPAGATION_RUN",
+        "OUT_PROPAGATION_DELAYED_RUN",
+        "OUT_PROPAGATION_SAMPLE_CLK",
+        "OUT_PROPAGATION_PLL_CLK",
+        "OUT_PROPAGATION_BUSY",
+        "OUT_PROPAGATION_PLL_UNLOCK",
+        "OUT_PROPAGATION_VPROBE",
+        "OUT_PROPAGATION_SYNCIN"
+      ],
+      "data_type": "string",
+      "description": "Out Selection",
+      "path": "/par/out_selection",
+      "value": "OUT_PROPAGATION_TRIGGER"
+    },
+    "posttrg": {
+      "data_type": "number",
+      "description": "Post TRG",
+      "increment": "8",
+      "max_value": "16777200",
+      "min_value": "0",
+      "path": "/par/posttrg",
+      "value": "256"
+    },
+    "reclen": {
+      "data_type": "number",
+      "description": "Record Length",
+      "increment": "20",
+      "max_value": "10485740",
+      "min_value": "20",
+      "path": "/par/reclen",
+      "value": "320"
+    },
+    "self_trigger_edge": {
+      "allowed_values": [
+        "RISE",
+        "FALL"
+      ],
+      "data_type": "string",
+      "description": "Self trigger edge",
+      "path": "/par/self_trigger_edge",
+      "value": "RISE"
+    },
+    "start_delay": {
+      "data_type": "number",
+      "description": "Sync. start delay",
+      "increment": "16",
+      "max_value": "4080",
+      "min_value": "0",
+      "path": "/par/start_delay",
+      "value": "0"
+    },
+    "startmode": {
+      "allowed_values": [
+        "START_MODE_SW",
+        "START_MODE_S_IN",
+        "START_MODE_FIRST_TRG"
+      ],
+      "data_type": "string",
+      "description": "Start mode",
+      "path": "/par/startmode",
+      "value": "START_MODE_SW"
+    },
+    "trg_count_all": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "Count all triggers",
+      "path": "/par/trg_count_all",
+      "value": "TRUE"
+    },
+    "trg_ext_enable": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "Ext. TRG enable",
+      "path": "/par/trg_ext_enable",
+      "value": "FALSE"
+    },
+    "trg_ext_out_propagate": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "Ext. TRG propagate",
+      "path": "/par/trg_ext_out_propagate",
+      "value": "FALSE"
+    },
+    "trg_sw_enable": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "SW TRG enable",
+      "path": "/par/trg_sw_enable",
+      "value": "TRUE"
+    },
+    "trg_sw_out_propagate": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "SW TRG propagate",
+      "path": "/par/trg_sw_out_propagate",
+      "value": "FALSE"
+    },
+    "trgin_level_sync": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "TRG IN level sync.",
+      "path": "/par/trgin_level_sync",
+      "value": "FALSE"
+    },
+    "trgin_to_mezzanines": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "TRG IN to mezzanines",
+      "path": "/par/trgin_to_mezzanines",
+      "value": "FALSE"
+    }
+  },
+  "readout_data_format": [
+    {
+      "dim": 0,
+      "name": "TIMESTAMP",
+      "type": "U64"
+    },
+    {
+      "dim": 0,
+      "name": "TIMESTAMP_NS",
+      "type": "U64"
+    },
+    {
+      "dim": 0,
+      "name": "TRIGGER_ID",
+      "type": "U32"
+    },
+    {
+      "dim": 2,
+      "name": "WAVEFORM",
+      "type": "I16"
+    },
+    {
+      "dim": 1,
+      "name": "WAVEFORM_SIZE",
+      "type": "SIZE_T"
+    },
+    {
+      "dim": 0,
+      "name": "EXTRA",
+      "type": "U16"
+    },
+    {
+      "dim": 0,
+      "name": "BOARD_ID",
+      "type": "U8"
+    },
+    {
+      "dim": 0,
+      "name": "BOARD_FAIL",
+      "type": "BOOL"
+    },
+    {
+      "dim": 0,
+      "name": "EVENT_SIZE",
+      "type": "U32"
+    }
+  ],
+  "trace_parameters": {
+    "0": {
+      "vtrace_probe": {
+        "allowed_values": [
+          "VPROBE_INPUT"
+        ],
+        "data_type": "string",
+        "description": "Virtual Probe",
+        "path": "/vtrace/0/par/vtrace_probe",
+        "value": "VPROBE_INPUT"
+      }
+    }
+  }
+}

@@ -1,0 +1,2885 @@
+{
+  "FW": "DPP-PSD",
+  "ModuleID": "10",
+  "SN": "990",
+  "URL": "dig1://caen.internal/usb?link_num=0",
+  "channel_parameters": {
+    "0": {
+      "ch_bline_fixed": {
+        "data_type": "number",
+        "description": "Fixed Baseline",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/0/par/ch_bline_fixed",
+        "value": "0"
+      },
+      "ch_bline_nsmean": {
+        "allowed_values": [
+          "BLINE_NSMEAN_FIXED",
+          "BLINE_NSMEAN_16",
+          "BLINE_NSMEAN_64",
+          "BLINE_NSMEAN_256",
+          "BLINE_NSMEAN_1024"
+        ],
+        "data_type": "string",
+        "description": "NSBL",
+        "path": "/ch/0/par/ch_bline_nsmean",
+        "value": "BLINE_NSMEAN_256"
+      },
+      "ch_cfd_delay": {
+        "data_type": "number",
+        "description": "CFD Delay",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/0/par/ch_cfd_delay",
+        "value": "6"
+      },
+      "ch_cfd_fraction": {
+        "allowed_values": [
+          "CFD_FRACTLIST_25",
+          "CFD_FRACTLIST_50",
+          "CFD_FRACTLIST_75",
+          "CFD_FRACTLIST_100"
+        ],
+        "data_type": "string",
+        "description": "CFD fraction",
+        "path": "/ch/0/par/ch_cfd_fraction",
+        "value": "CFD_FRACTLIST_75"
+      },
+      "ch_cfd_smoothexp": {
+        "allowed_values": [
+          "CFD_SMOOTH_EXP_1",
+          "CFD_SMOOTH_EXP_2",
+          "CFD_SMOOTH_EXP_4",
+          "CFD_SMOOTH_EXP_8",
+          "CFD_SMOOTH_EXP_16"
+        ],
+        "data_type": "string",
+        "description": "CFD smooth exponent",
+        "path": "/ch/0/par/ch_cfd_smoothexp",
+        "value": "CFD_SMOOTH_EXP_1"
+      },
+      "ch_coinc_majlev": {
+        "data_type": "number",
+        "description": "Majority level",
+        "increment": "1",
+        "max_value": "7",
+        "min_value": "0",
+        "path": "/ch/0/par/ch_coinc_majlev",
+        "value": "0"
+      },
+      "ch_coinc_mask": {
+        "data_type": "number",
+        "description": "Coinc. mask",
+        "increment": "1",
+        "max_value": "15",
+        "min_value": "0",
+        "path": "/ch/0/par/ch_coinc_mask",
+        "value": "0"
+      },
+      "ch_coinc_operation": {
+        "allowed_values": [
+          "COINC_OPERATION_OR",
+          "COINC_OPERATION_AND",
+          "COINC_OPERATION_MAJ"
+        ],
+        "data_type": "string",
+        "description": "Coinc. operation",
+        "path": "/ch/0/par/ch_coinc_operation",
+        "value": "COINC_OPERATION_OR"
+      },
+      "ch_coinc_trgext": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Coinc. TRGEXT sens.",
+        "path": "/ch/0/par/ch_coinc_trgext",
+        "value": "FALSE"
+      },
+      "ch_coinc_trgsw": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Coinc. TRGSW sens.",
+        "path": "/ch/0/par/ch_coinc_trgsw",
+        "value": "FALSE"
+      },
+      "ch_couple_trg_mode": {
+        "allowed_values": [
+          "COUPLE_TRG_MODE_DISABLED",
+          "COUPLE_TRG_MODE_AND",
+          "COUPLE_TRG_MODE_EVEN_ONLY",
+          "COUPLE_TRG_MODE_ODD_ONLY",
+          "COUPLE_TRG_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG mode",
+        "path": "/ch/0/par/ch_couple_trg_mode",
+        "value": "COUPLE_TRG_MODE_DISABLED"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/0/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_discr_mode": {
+        "allowed_values": [
+          "DISCR_MODE_LED",
+          "DISCR_MODE_CFD"
+        ],
+        "data_type": "string",
+        "description": "Discr. mode",
+        "path": "/ch/0/par/ch_discr_mode",
+        "value": "DISCR_MODE_LED"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/0/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_energy_cgain": {
+        "allowed_values": [
+          "CHARGESENS_2.5_FC_LSB_VPP",
+          "CHARGESENS_10_FC_LSB_VPP",
+          "CHARGESENS_40_FC_LSB_VPP",
+          "CHARGESENS_160_FC_LSB_VPP",
+          "CHARGESENS_640_FC_LSB_VPP",
+          "CHARGESENS_2560_FC_LSB_VPP"
+        ],
+        "data_type": "string",
+        "description": "Energy coarse gain",
+        "path": "/ch/0/par/ch_energy_cgain",
+        "value": "CHARGESENS_40_FC_LSB_VPP"
+      },
+      "ch_extras_opt": {
+        "allowed_values": [
+          "EXTRAS_OPT_TT48_BL4",
+          "EXTRAS_OPT_TT48_FLAGS",
+          "EXTRAS_OPT_TT48_FLAGS_FINETT",
+          "EXTRAS_OPT_LOSTTRG_TOTTRG",
+          "EXTRAS_OPT_SBZC_SAZC"
+        ],
+        "data_type": "string",
+        "description": "Extras option",
+        "path": "/ch/0/par/ch_extras_opt",
+        "value": "EXTRAS_OPT_TT48_FLAGS_FINETT"
+      },
+      "ch_gate": {
+        "data_type": "number",
+        "description": "Gate",
+        "increment": "2",
+        "max_value": "32766",
+        "min_value": "4",
+        "path": "/ch/0/par/ch_gate",
+        "value": "300"
+      },
+      "ch_gatepre": {
+        "data_type": "number",
+        "description": "Pre gate",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/0/par/ch_gatepre",
+        "value": "50"
+      },
+      "ch_gateshort": {
+        "data_type": "number",
+        "description": "Gate short",
+        "increment": "2",
+        "max_value": "2046",
+        "min_value": "2",
+        "path": "/ch/0/par/ch_gateshort",
+        "value": "80"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/0/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/0/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_pedestal_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Charge pedestal enable",
+        "path": "/ch/0/par/ch_pedestal_en",
+        "value": "FALSE"
+      },
+      "ch_polarity": {
+        "allowed_values": [
+          "POLARITY_POSITIVE",
+          "POLARITY_NEGATIVE"
+        ],
+        "data_type": "string",
+        "description": "Polarity",
+        "path": "/ch/0/par/ch_polarity",
+        "value": "POLARITY_NEGATIVE"
+      },
+      "ch_pretrg": {
+        "data_type": "number",
+        "description": "Pre TRG",
+        "increment": "8",
+        "max_value": "4088",
+        "min_value": "40",
+        "path": "/ch/0/par/ch_pretrg",
+        "value": "96"
+      },
+      "ch_pu_count_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup counting",
+        "path": "/ch/0/par/ch_pu_count_en",
+        "value": "FALSE"
+      },
+      "ch_pur_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup rejection",
+        "path": "/ch/0/par/ch_pur_en",
+        "value": "FALSE"
+      },
+      "ch_self_trg_enable": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. self trigger enable",
+        "path": "/ch/0/par/ch_self_trg_enable",
+        "value": "TRUE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/0/par/ch_threshold",
+        "value": "100"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/0/par/ch_trg_global_gen",
+        "value": "FALSE"
+      },
+      "ch_trg_holdoff": {
+        "data_type": "number",
+        "description": "TRG hold-off",
+        "increment": "8",
+        "max_value": "524280",
+        "min_value": "0",
+        "path": "/ch/0/par/ch_trg_holdoff",
+        "value": "1024"
+      },
+      "ch_trg_latency": {
+        "allowed_values": [
+          "TRG_LATENCY_MODE_NONE",
+          "TRG_LATENCY_MODE_COUPLES",
+          "TRG_LATENCY_MODE_ONETOALL"
+        ],
+        "data_type": "string",
+        "description": "Trigger latency",
+        "path": "/ch/0/par/ch_trg_latency",
+        "value": "TRG_LATENCY_MODE_NONE"
+      },
+      "ch_trg_mode": {
+        "allowed_values": [
+          "TRIGGER_MODE_NORMAL",
+          "TRIGGER_MODE_COINC",
+          "TRIGGER_MODE_ANTICOINC"
+        ],
+        "data_type": "string",
+        "description": "Trigger mode",
+        "path": "/ch/0/par/ch_trg_mode",
+        "value": "TRIGGER_MODE_NORMAL"
+      },
+      "ch_val_mode": {
+        "allowed_values": [
+          "COUPLE_VAL_MODE_DISABLED",
+          "COUPLE_VAL_MODE_TWIN_ONLY",
+          "COUPLE_VAL_MODE_MBOARD_ONLY",
+          "COUPLE_VAL_MODE_AND",
+          "COUPLE_VAL_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG val.",
+        "path": "/ch/0/par/ch_val_mode",
+        "value": "COUPLE_VAL_MODE_DISABLED"
+      },
+      "ch_veto_src": {
+        "allowed_values": [
+          "VETO_SRC_DISABLED",
+          "VETO_SRC_COMMON",
+          "VETO_SRC_INDIVIDUAL",
+          "VETO_SRC_SATURATION"
+        ],
+        "data_type": "string",
+        "description": "Veto source",
+        "path": "/ch/0/par/ch_veto_src",
+        "value": "VETO_SRC_DISABLED"
+      }
+    },
+    "1": {
+      "ch_bline_fixed": {
+        "data_type": "number",
+        "description": "Fixed Baseline",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/1/par/ch_bline_fixed",
+        "value": "0"
+      },
+      "ch_bline_nsmean": {
+        "allowed_values": [
+          "BLINE_NSMEAN_FIXED",
+          "BLINE_NSMEAN_16",
+          "BLINE_NSMEAN_64",
+          "BLINE_NSMEAN_256",
+          "BLINE_NSMEAN_1024"
+        ],
+        "data_type": "string",
+        "description": "NSBL",
+        "path": "/ch/1/par/ch_bline_nsmean",
+        "value": "BLINE_NSMEAN_256"
+      },
+      "ch_cfd_delay": {
+        "data_type": "number",
+        "description": "CFD Delay",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/1/par/ch_cfd_delay",
+        "value": "6"
+      },
+      "ch_cfd_fraction": {
+        "allowed_values": [
+          "CFD_FRACTLIST_25",
+          "CFD_FRACTLIST_50",
+          "CFD_FRACTLIST_75",
+          "CFD_FRACTLIST_100"
+        ],
+        "data_type": "string",
+        "description": "CFD fraction",
+        "path": "/ch/1/par/ch_cfd_fraction",
+        "value": "CFD_FRACTLIST_75"
+      },
+      "ch_cfd_smoothexp": {
+        "allowed_values": [
+          "CFD_SMOOTH_EXP_1",
+          "CFD_SMOOTH_EXP_2",
+          "CFD_SMOOTH_EXP_4",
+          "CFD_SMOOTH_EXP_8",
+          "CFD_SMOOTH_EXP_16"
+        ],
+        "data_type": "string",
+        "description": "CFD smooth exponent",
+        "path": "/ch/1/par/ch_cfd_smoothexp",
+        "value": "CFD_SMOOTH_EXP_1"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/1/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_discr_mode": {
+        "allowed_values": [
+          "DISCR_MODE_LED",
+          "DISCR_MODE_CFD"
+        ],
+        "data_type": "string",
+        "description": "Discr. mode",
+        "path": "/ch/1/par/ch_discr_mode",
+        "value": "DISCR_MODE_LED"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/1/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_energy_cgain": {
+        "allowed_values": [
+          "CHARGESENS_2.5_FC_LSB_VPP",
+          "CHARGESENS_10_FC_LSB_VPP",
+          "CHARGESENS_40_FC_LSB_VPP",
+          "CHARGESENS_160_FC_LSB_VPP",
+          "CHARGESENS_640_FC_LSB_VPP",
+          "CHARGESENS_2560_FC_LSB_VPP"
+        ],
+        "data_type": "string",
+        "description": "Energy coarse gain",
+        "path": "/ch/1/par/ch_energy_cgain",
+        "value": "CHARGESENS_40_FC_LSB_VPP"
+      },
+      "ch_extras_opt": {
+        "allowed_values": [
+          "EXTRAS_OPT_TT48_BL4",
+          "EXTRAS_OPT_TT48_FLAGS",
+          "EXTRAS_OPT_TT48_FLAGS_FINETT",
+          "EXTRAS_OPT_LOSTTRG_TOTTRG",
+          "EXTRAS_OPT_SBZC_SAZC"
+        ],
+        "data_type": "string",
+        "description": "Extras option",
+        "path": "/ch/1/par/ch_extras_opt",
+        "value": "EXTRAS_OPT_TT48_FLAGS_FINETT"
+      },
+      "ch_gate": {
+        "data_type": "number",
+        "description": "Gate",
+        "increment": "2",
+        "max_value": "32766",
+        "min_value": "4",
+        "path": "/ch/1/par/ch_gate",
+        "value": "300"
+      },
+      "ch_gatepre": {
+        "data_type": "number",
+        "description": "Pre gate",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/1/par/ch_gatepre",
+        "value": "50"
+      },
+      "ch_gateshort": {
+        "data_type": "number",
+        "description": "Gate short",
+        "increment": "2",
+        "max_value": "2046",
+        "min_value": "2",
+        "path": "/ch/1/par/ch_gateshort",
+        "value": "80"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/1/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/1/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_pedestal_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Charge pedestal enable",
+        "path": "/ch/1/par/ch_pedestal_en",
+        "value": "FALSE"
+      },
+      "ch_polarity": {
+        "allowed_values": [
+          "POLARITY_POSITIVE",
+          "POLARITY_NEGATIVE"
+        ],
+        "data_type": "string",
+        "description": "Polarity",
+        "path": "/ch/1/par/ch_polarity",
+        "value": "POLARITY_NEGATIVE"
+      },
+      "ch_pretrg": {
+        "data_type": "number",
+        "description": "Pre TRG",
+        "increment": "8",
+        "max_value": "4088",
+        "min_value": "40",
+        "path": "/ch/1/par/ch_pretrg",
+        "value": "96"
+      },
+      "ch_pu_count_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup counting",
+        "path": "/ch/1/par/ch_pu_count_en",
+        "value": "FALSE"
+      },
+      "ch_pur_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup rejection",
+        "path": "/ch/1/par/ch_pur_en",
+        "value": "FALSE"
+      },
+      "ch_self_trg_enable": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. self trigger enable",
+        "path": "/ch/1/par/ch_self_trg_enable",
+        "value": "TRUE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/1/par/ch_threshold",
+        "value": "100"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/1/par/ch_trg_global_gen",
+        "value": "FALSE"
+      },
+      "ch_trg_holdoff": {
+        "data_type": "number",
+        "description": "TRG hold-off",
+        "increment": "8",
+        "max_value": "524280",
+        "min_value": "0",
+        "path": "/ch/1/par/ch_trg_holdoff",
+        "value": "1024"
+      },
+      "ch_trg_latency": {
+        "allowed_values": [
+          "TRG_LATENCY_MODE_NONE",
+          "TRG_LATENCY_MODE_COUPLES",
+          "TRG_LATENCY_MODE_ONETOALL"
+        ],
+        "data_type": "string",
+        "description": "Trigger latency",
+        "path": "/ch/1/par/ch_trg_latency",
+        "value": "TRG_LATENCY_MODE_NONE"
+      },
+      "ch_trg_mode": {
+        "allowed_values": [
+          "TRIGGER_MODE_NORMAL",
+          "TRIGGER_MODE_COINC",
+          "TRIGGER_MODE_ANTICOINC"
+        ],
+        "data_type": "string",
+        "description": "Trigger mode",
+        "path": "/ch/1/par/ch_trg_mode",
+        "value": "TRIGGER_MODE_NORMAL"
+      },
+      "ch_veto_src": {
+        "allowed_values": [
+          "VETO_SRC_DISABLED",
+          "VETO_SRC_COMMON",
+          "VETO_SRC_INDIVIDUAL",
+          "VETO_SRC_SATURATION"
+        ],
+        "data_type": "string",
+        "description": "Veto source",
+        "path": "/ch/1/par/ch_veto_src",
+        "value": "VETO_SRC_DISABLED"
+      }
+    },
+    "2": {
+      "ch_bline_fixed": {
+        "data_type": "number",
+        "description": "Fixed Baseline",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/2/par/ch_bline_fixed",
+        "value": "0"
+      },
+      "ch_bline_nsmean": {
+        "allowed_values": [
+          "BLINE_NSMEAN_FIXED",
+          "BLINE_NSMEAN_16",
+          "BLINE_NSMEAN_64",
+          "BLINE_NSMEAN_256",
+          "BLINE_NSMEAN_1024"
+        ],
+        "data_type": "string",
+        "description": "NSBL",
+        "path": "/ch/2/par/ch_bline_nsmean",
+        "value": "BLINE_NSMEAN_256"
+      },
+      "ch_cfd_delay": {
+        "data_type": "number",
+        "description": "CFD Delay",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/2/par/ch_cfd_delay",
+        "value": "6"
+      },
+      "ch_cfd_fraction": {
+        "allowed_values": [
+          "CFD_FRACTLIST_25",
+          "CFD_FRACTLIST_50",
+          "CFD_FRACTLIST_75",
+          "CFD_FRACTLIST_100"
+        ],
+        "data_type": "string",
+        "description": "CFD fraction",
+        "path": "/ch/2/par/ch_cfd_fraction",
+        "value": "CFD_FRACTLIST_75"
+      },
+      "ch_cfd_smoothexp": {
+        "allowed_values": [
+          "CFD_SMOOTH_EXP_1",
+          "CFD_SMOOTH_EXP_2",
+          "CFD_SMOOTH_EXP_4",
+          "CFD_SMOOTH_EXP_8",
+          "CFD_SMOOTH_EXP_16"
+        ],
+        "data_type": "string",
+        "description": "CFD smooth exponent",
+        "path": "/ch/2/par/ch_cfd_smoothexp",
+        "value": "CFD_SMOOTH_EXP_1"
+      },
+      "ch_coinc_majlev": {
+        "data_type": "number",
+        "description": "Majority level",
+        "increment": "1",
+        "max_value": "7",
+        "min_value": "0",
+        "path": "/ch/2/par/ch_coinc_majlev",
+        "value": "0"
+      },
+      "ch_coinc_mask": {
+        "data_type": "number",
+        "description": "Coinc. mask",
+        "increment": "1",
+        "max_value": "15",
+        "min_value": "0",
+        "path": "/ch/2/par/ch_coinc_mask",
+        "value": "0"
+      },
+      "ch_coinc_operation": {
+        "allowed_values": [
+          "COINC_OPERATION_OR",
+          "COINC_OPERATION_AND",
+          "COINC_OPERATION_MAJ"
+        ],
+        "data_type": "string",
+        "description": "Coinc. operation",
+        "path": "/ch/2/par/ch_coinc_operation",
+        "value": "COINC_OPERATION_OR"
+      },
+      "ch_coinc_trgext": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Coinc. TRGEXT sens.",
+        "path": "/ch/2/par/ch_coinc_trgext",
+        "value": "FALSE"
+      },
+      "ch_coinc_trgsw": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Coinc. TRGSW sens.",
+        "path": "/ch/2/par/ch_coinc_trgsw",
+        "value": "FALSE"
+      },
+      "ch_couple_trg_mode": {
+        "allowed_values": [
+          "COUPLE_TRG_MODE_DISABLED",
+          "COUPLE_TRG_MODE_AND",
+          "COUPLE_TRG_MODE_EVEN_ONLY",
+          "COUPLE_TRG_MODE_ODD_ONLY",
+          "COUPLE_TRG_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG mode",
+        "path": "/ch/2/par/ch_couple_trg_mode",
+        "value": "COUPLE_TRG_MODE_DISABLED"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/2/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_discr_mode": {
+        "allowed_values": [
+          "DISCR_MODE_LED",
+          "DISCR_MODE_CFD"
+        ],
+        "data_type": "string",
+        "description": "Discr. mode",
+        "path": "/ch/2/par/ch_discr_mode",
+        "value": "DISCR_MODE_LED"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/2/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_energy_cgain": {
+        "allowed_values": [
+          "CHARGESENS_2.5_FC_LSB_VPP",
+          "CHARGESENS_10_FC_LSB_VPP",
+          "CHARGESENS_40_FC_LSB_VPP",
+          "CHARGESENS_160_FC_LSB_VPP",
+          "CHARGESENS_640_FC_LSB_VPP",
+          "CHARGESENS_2560_FC_LSB_VPP"
+        ],
+        "data_type": "string",
+        "description": "Energy coarse gain",
+        "path": "/ch/2/par/ch_energy_cgain",
+        "value": "CHARGESENS_40_FC_LSB_VPP"
+      },
+      "ch_extras_opt": {
+        "allowed_values": [
+          "EXTRAS_OPT_TT48_BL4",
+          "EXTRAS_OPT_TT48_FLAGS",
+          "EXTRAS_OPT_TT48_FLAGS_FINETT",
+          "EXTRAS_OPT_LOSTTRG_TOTTRG",
+          "EXTRAS_OPT_SBZC_SAZC"
+        ],
+        "data_type": "string",
+        "description": "Extras option",
+        "path": "/ch/2/par/ch_extras_opt",
+        "value": "EXTRAS_OPT_TT48_FLAGS_FINETT"
+      },
+      "ch_gate": {
+        "data_type": "number",
+        "description": "Gate",
+        "increment": "2",
+        "max_value": "32766",
+        "min_value": "4",
+        "path": "/ch/2/par/ch_gate",
+        "value": "300"
+      },
+      "ch_gatepre": {
+        "data_type": "number",
+        "description": "Pre gate",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/2/par/ch_gatepre",
+        "value": "50"
+      },
+      "ch_gateshort": {
+        "data_type": "number",
+        "description": "Gate short",
+        "increment": "2",
+        "max_value": "2046",
+        "min_value": "2",
+        "path": "/ch/2/par/ch_gateshort",
+        "value": "80"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/2/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/2/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_pedestal_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Charge pedestal enable",
+        "path": "/ch/2/par/ch_pedestal_en",
+        "value": "FALSE"
+      },
+      "ch_polarity": {
+        "allowed_values": [
+          "POLARITY_POSITIVE",
+          "POLARITY_NEGATIVE"
+        ],
+        "data_type": "string",
+        "description": "Polarity",
+        "path": "/ch/2/par/ch_polarity",
+        "value": "POLARITY_NEGATIVE"
+      },
+      "ch_pretrg": {
+        "data_type": "number",
+        "description": "Pre TRG",
+        "increment": "8",
+        "max_value": "4088",
+        "min_value": "40",
+        "path": "/ch/2/par/ch_pretrg",
+        "value": "96"
+      },
+      "ch_pu_count_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup counting",
+        "path": "/ch/2/par/ch_pu_count_en",
+        "value": "FALSE"
+      },
+      "ch_pur_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup rejection",
+        "path": "/ch/2/par/ch_pur_en",
+        "value": "FALSE"
+      },
+      "ch_self_trg_enable": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. self trigger enable",
+        "path": "/ch/2/par/ch_self_trg_enable",
+        "value": "TRUE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/2/par/ch_threshold",
+        "value": "100"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/2/par/ch_trg_global_gen",
+        "value": "FALSE"
+      },
+      "ch_trg_holdoff": {
+        "data_type": "number",
+        "description": "TRG hold-off",
+        "increment": "8",
+        "max_value": "524280",
+        "min_value": "0",
+        "path": "/ch/2/par/ch_trg_holdoff",
+        "value": "1024"
+      },
+      "ch_trg_latency": {
+        "allowed_values": [
+          "TRG_LATENCY_MODE_NONE",
+          "TRG_LATENCY_MODE_COUPLES",
+          "TRG_LATENCY_MODE_ONETOALL"
+        ],
+        "data_type": "string",
+        "description": "Trigger latency",
+        "path": "/ch/2/par/ch_trg_latency",
+        "value": "TRG_LATENCY_MODE_NONE"
+      },
+      "ch_trg_mode": {
+        "allowed_values": [
+          "TRIGGER_MODE_NORMAL",
+          "TRIGGER_MODE_COINC",
+          "TRIGGER_MODE_ANTICOINC"
+        ],
+        "data_type": "string",
+        "description": "Trigger mode",
+        "path": "/ch/2/par/ch_trg_mode",
+        "value": "TRIGGER_MODE_NORMAL"
+      },
+      "ch_val_mode": {
+        "allowed_values": [
+          "COUPLE_VAL_MODE_DISABLED",
+          "COUPLE_VAL_MODE_TWIN_ONLY",
+          "COUPLE_VAL_MODE_MBOARD_ONLY",
+          "COUPLE_VAL_MODE_AND",
+          "COUPLE_VAL_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG val.",
+        "path": "/ch/2/par/ch_val_mode",
+        "value": "COUPLE_VAL_MODE_DISABLED"
+      },
+      "ch_veto_src": {
+        "allowed_values": [
+          "VETO_SRC_DISABLED",
+          "VETO_SRC_COMMON",
+          "VETO_SRC_INDIVIDUAL",
+          "VETO_SRC_SATURATION"
+        ],
+        "data_type": "string",
+        "description": "Veto source",
+        "path": "/ch/2/par/ch_veto_src",
+        "value": "VETO_SRC_DISABLED"
+      }
+    },
+    "3": {
+      "ch_bline_fixed": {
+        "data_type": "number",
+        "description": "Fixed Baseline",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/3/par/ch_bline_fixed",
+        "value": "0"
+      },
+      "ch_bline_nsmean": {
+        "allowed_values": [
+          "BLINE_NSMEAN_FIXED",
+          "BLINE_NSMEAN_16",
+          "BLINE_NSMEAN_64",
+          "BLINE_NSMEAN_256",
+          "BLINE_NSMEAN_1024"
+        ],
+        "data_type": "string",
+        "description": "NSBL",
+        "path": "/ch/3/par/ch_bline_nsmean",
+        "value": "BLINE_NSMEAN_256"
+      },
+      "ch_cfd_delay": {
+        "data_type": "number",
+        "description": "CFD Delay",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/3/par/ch_cfd_delay",
+        "value": "6"
+      },
+      "ch_cfd_fraction": {
+        "allowed_values": [
+          "CFD_FRACTLIST_25",
+          "CFD_FRACTLIST_50",
+          "CFD_FRACTLIST_75",
+          "CFD_FRACTLIST_100"
+        ],
+        "data_type": "string",
+        "description": "CFD fraction",
+        "path": "/ch/3/par/ch_cfd_fraction",
+        "value": "CFD_FRACTLIST_75"
+      },
+      "ch_cfd_smoothexp": {
+        "allowed_values": [
+          "CFD_SMOOTH_EXP_1",
+          "CFD_SMOOTH_EXP_2",
+          "CFD_SMOOTH_EXP_4",
+          "CFD_SMOOTH_EXP_8",
+          "CFD_SMOOTH_EXP_16"
+        ],
+        "data_type": "string",
+        "description": "CFD smooth exponent",
+        "path": "/ch/3/par/ch_cfd_smoothexp",
+        "value": "CFD_SMOOTH_EXP_1"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/3/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_discr_mode": {
+        "allowed_values": [
+          "DISCR_MODE_LED",
+          "DISCR_MODE_CFD"
+        ],
+        "data_type": "string",
+        "description": "Discr. mode",
+        "path": "/ch/3/par/ch_discr_mode",
+        "value": "DISCR_MODE_LED"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/3/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_energy_cgain": {
+        "allowed_values": [
+          "CHARGESENS_2.5_FC_LSB_VPP",
+          "CHARGESENS_10_FC_LSB_VPP",
+          "CHARGESENS_40_FC_LSB_VPP",
+          "CHARGESENS_160_FC_LSB_VPP",
+          "CHARGESENS_640_FC_LSB_VPP",
+          "CHARGESENS_2560_FC_LSB_VPP"
+        ],
+        "data_type": "string",
+        "description": "Energy coarse gain",
+        "path": "/ch/3/par/ch_energy_cgain",
+        "value": "CHARGESENS_40_FC_LSB_VPP"
+      },
+      "ch_extras_opt": {
+        "allowed_values": [
+          "EXTRAS_OPT_TT48_BL4",
+          "EXTRAS_OPT_TT48_FLAGS",
+          "EXTRAS_OPT_TT48_FLAGS_FINETT",
+          "EXTRAS_OPT_LOSTTRG_TOTTRG",
+          "EXTRAS_OPT_SBZC_SAZC"
+        ],
+        "data_type": "string",
+        "description": "Extras option",
+        "path": "/ch/3/par/ch_extras_opt",
+        "value": "EXTRAS_OPT_TT48_FLAGS_FINETT"
+      },
+      "ch_gate": {
+        "data_type": "number",
+        "description": "Gate",
+        "increment": "2",
+        "max_value": "32766",
+        "min_value": "4",
+        "path": "/ch/3/par/ch_gate",
+        "value": "300"
+      },
+      "ch_gatepre": {
+        "data_type": "number",
+        "description": "Pre gate",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/3/par/ch_gatepre",
+        "value": "50"
+      },
+      "ch_gateshort": {
+        "data_type": "number",
+        "description": "Gate short",
+        "increment": "2",
+        "max_value": "2046",
+        "min_value": "2",
+        "path": "/ch/3/par/ch_gateshort",
+        "value": "80"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/3/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/3/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_pedestal_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Charge pedestal enable",
+        "path": "/ch/3/par/ch_pedestal_en",
+        "value": "FALSE"
+      },
+      "ch_polarity": {
+        "allowed_values": [
+          "POLARITY_POSITIVE",
+          "POLARITY_NEGATIVE"
+        ],
+        "data_type": "string",
+        "description": "Polarity",
+        "path": "/ch/3/par/ch_polarity",
+        "value": "POLARITY_NEGATIVE"
+      },
+      "ch_pretrg": {
+        "data_type": "number",
+        "description": "Pre TRG",
+        "increment": "8",
+        "max_value": "4088",
+        "min_value": "40",
+        "path": "/ch/3/par/ch_pretrg",
+        "value": "96"
+      },
+      "ch_pu_count_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup counting",
+        "path": "/ch/3/par/ch_pu_count_en",
+        "value": "FALSE"
+      },
+      "ch_pur_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup rejection",
+        "path": "/ch/3/par/ch_pur_en",
+        "value": "FALSE"
+      },
+      "ch_self_trg_enable": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. self trigger enable",
+        "path": "/ch/3/par/ch_self_trg_enable",
+        "value": "TRUE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/3/par/ch_threshold",
+        "value": "100"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/3/par/ch_trg_global_gen",
+        "value": "FALSE"
+      },
+      "ch_trg_holdoff": {
+        "data_type": "number",
+        "description": "TRG hold-off",
+        "increment": "8",
+        "max_value": "524280",
+        "min_value": "0",
+        "path": "/ch/3/par/ch_trg_holdoff",
+        "value": "1024"
+      },
+      "ch_trg_latency": {
+        "allowed_values": [
+          "TRG_LATENCY_MODE_NONE",
+          "TRG_LATENCY_MODE_COUPLES",
+          "TRG_LATENCY_MODE_ONETOALL"
+        ],
+        "data_type": "string",
+        "description": "Trigger latency",
+        "path": "/ch/3/par/ch_trg_latency",
+        "value": "TRG_LATENCY_MODE_NONE"
+      },
+      "ch_trg_mode": {
+        "allowed_values": [
+          "TRIGGER_MODE_NORMAL",
+          "TRIGGER_MODE_COINC",
+          "TRIGGER_MODE_ANTICOINC"
+        ],
+        "data_type": "string",
+        "description": "Trigger mode",
+        "path": "/ch/3/par/ch_trg_mode",
+        "value": "TRIGGER_MODE_NORMAL"
+      },
+      "ch_veto_src": {
+        "allowed_values": [
+          "VETO_SRC_DISABLED",
+          "VETO_SRC_COMMON",
+          "VETO_SRC_INDIVIDUAL",
+          "VETO_SRC_SATURATION"
+        ],
+        "data_type": "string",
+        "description": "Veto source",
+        "path": "/ch/3/par/ch_veto_src",
+        "value": "VETO_SRC_DISABLED"
+      }
+    },
+    "4": {
+      "ch_bline_fixed": {
+        "data_type": "number",
+        "description": "Fixed Baseline",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/4/par/ch_bline_fixed",
+        "value": "0"
+      },
+      "ch_bline_nsmean": {
+        "allowed_values": [
+          "BLINE_NSMEAN_FIXED",
+          "BLINE_NSMEAN_16",
+          "BLINE_NSMEAN_64",
+          "BLINE_NSMEAN_256",
+          "BLINE_NSMEAN_1024"
+        ],
+        "data_type": "string",
+        "description": "NSBL",
+        "path": "/ch/4/par/ch_bline_nsmean",
+        "value": "BLINE_NSMEAN_256"
+      },
+      "ch_cfd_delay": {
+        "data_type": "number",
+        "description": "CFD Delay",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/4/par/ch_cfd_delay",
+        "value": "6"
+      },
+      "ch_cfd_fraction": {
+        "allowed_values": [
+          "CFD_FRACTLIST_25",
+          "CFD_FRACTLIST_50",
+          "CFD_FRACTLIST_75",
+          "CFD_FRACTLIST_100"
+        ],
+        "data_type": "string",
+        "description": "CFD fraction",
+        "path": "/ch/4/par/ch_cfd_fraction",
+        "value": "CFD_FRACTLIST_75"
+      },
+      "ch_cfd_smoothexp": {
+        "allowed_values": [
+          "CFD_SMOOTH_EXP_1",
+          "CFD_SMOOTH_EXP_2",
+          "CFD_SMOOTH_EXP_4",
+          "CFD_SMOOTH_EXP_8",
+          "CFD_SMOOTH_EXP_16"
+        ],
+        "data_type": "string",
+        "description": "CFD smooth exponent",
+        "path": "/ch/4/par/ch_cfd_smoothexp",
+        "value": "CFD_SMOOTH_EXP_1"
+      },
+      "ch_coinc_majlev": {
+        "data_type": "number",
+        "description": "Majority level",
+        "increment": "1",
+        "max_value": "7",
+        "min_value": "0",
+        "path": "/ch/4/par/ch_coinc_majlev",
+        "value": "0"
+      },
+      "ch_coinc_mask": {
+        "data_type": "number",
+        "description": "Coinc. mask",
+        "increment": "1",
+        "max_value": "15",
+        "min_value": "0",
+        "path": "/ch/4/par/ch_coinc_mask",
+        "value": "0"
+      },
+      "ch_coinc_operation": {
+        "allowed_values": [
+          "COINC_OPERATION_OR",
+          "COINC_OPERATION_AND",
+          "COINC_OPERATION_MAJ"
+        ],
+        "data_type": "string",
+        "description": "Coinc. operation",
+        "path": "/ch/4/par/ch_coinc_operation",
+        "value": "COINC_OPERATION_OR"
+      },
+      "ch_coinc_trgext": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Coinc. TRGEXT sens.",
+        "path": "/ch/4/par/ch_coinc_trgext",
+        "value": "FALSE"
+      },
+      "ch_coinc_trgsw": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Coinc. TRGSW sens.",
+        "path": "/ch/4/par/ch_coinc_trgsw",
+        "value": "FALSE"
+      },
+      "ch_couple_trg_mode": {
+        "allowed_values": [
+          "COUPLE_TRG_MODE_DISABLED",
+          "COUPLE_TRG_MODE_AND",
+          "COUPLE_TRG_MODE_EVEN_ONLY",
+          "COUPLE_TRG_MODE_ODD_ONLY",
+          "COUPLE_TRG_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG mode",
+        "path": "/ch/4/par/ch_couple_trg_mode",
+        "value": "COUPLE_TRG_MODE_DISABLED"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/4/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_discr_mode": {
+        "allowed_values": [
+          "DISCR_MODE_LED",
+          "DISCR_MODE_CFD"
+        ],
+        "data_type": "string",
+        "description": "Discr. mode",
+        "path": "/ch/4/par/ch_discr_mode",
+        "value": "DISCR_MODE_LED"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/4/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_energy_cgain": {
+        "allowed_values": [
+          "CHARGESENS_2.5_FC_LSB_VPP",
+          "CHARGESENS_10_FC_LSB_VPP",
+          "CHARGESENS_40_FC_LSB_VPP",
+          "CHARGESENS_160_FC_LSB_VPP",
+          "CHARGESENS_640_FC_LSB_VPP",
+          "CHARGESENS_2560_FC_LSB_VPP"
+        ],
+        "data_type": "string",
+        "description": "Energy coarse gain",
+        "path": "/ch/4/par/ch_energy_cgain",
+        "value": "CHARGESENS_40_FC_LSB_VPP"
+      },
+      "ch_extras_opt": {
+        "allowed_values": [
+          "EXTRAS_OPT_TT48_BL4",
+          "EXTRAS_OPT_TT48_FLAGS",
+          "EXTRAS_OPT_TT48_FLAGS_FINETT",
+          "EXTRAS_OPT_LOSTTRG_TOTTRG",
+          "EXTRAS_OPT_SBZC_SAZC"
+        ],
+        "data_type": "string",
+        "description": "Extras option",
+        "path": "/ch/4/par/ch_extras_opt",
+        "value": "EXTRAS_OPT_TT48_FLAGS_FINETT"
+      },
+      "ch_gate": {
+        "data_type": "number",
+        "description": "Gate",
+        "increment": "2",
+        "max_value": "32766",
+        "min_value": "4",
+        "path": "/ch/4/par/ch_gate",
+        "value": "300"
+      },
+      "ch_gatepre": {
+        "data_type": "number",
+        "description": "Pre gate",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/4/par/ch_gatepre",
+        "value": "50"
+      },
+      "ch_gateshort": {
+        "data_type": "number",
+        "description": "Gate short",
+        "increment": "2",
+        "max_value": "2046",
+        "min_value": "2",
+        "path": "/ch/4/par/ch_gateshort",
+        "value": "80"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/4/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/4/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_pedestal_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Charge pedestal enable",
+        "path": "/ch/4/par/ch_pedestal_en",
+        "value": "FALSE"
+      },
+      "ch_polarity": {
+        "allowed_values": [
+          "POLARITY_POSITIVE",
+          "POLARITY_NEGATIVE"
+        ],
+        "data_type": "string",
+        "description": "Polarity",
+        "path": "/ch/4/par/ch_polarity",
+        "value": "POLARITY_NEGATIVE"
+      },
+      "ch_pretrg": {
+        "data_type": "number",
+        "description": "Pre TRG",
+        "increment": "8",
+        "max_value": "4088",
+        "min_value": "40",
+        "path": "/ch/4/par/ch_pretrg",
+        "value": "96"
+      },
+      "ch_pu_count_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup counting",
+        "path": "/ch/4/par/ch_pu_count_en",
+        "value": "FALSE"
+      },
+      "ch_pur_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup rejection",
+        "path": "/ch/4/par/ch_pur_en",
+        "value": "FALSE"
+      },
+      "ch_self_trg_enable": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. self trigger enable",
+        "path": "/ch/4/par/ch_self_trg_enable",
+        "value": "TRUE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/4/par/ch_threshold",
+        "value": "100"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/4/par/ch_trg_global_gen",
+        "value": "FALSE"
+      },
+      "ch_trg_holdoff": {
+        "data_type": "number",
+        "description": "TRG hold-off",
+        "increment": "8",
+        "max_value": "524280",
+        "min_value": "0",
+        "path": "/ch/4/par/ch_trg_holdoff",
+        "value": "1024"
+      },
+      "ch_trg_latency": {
+        "allowed_values": [
+          "TRG_LATENCY_MODE_NONE",
+          "TRG_LATENCY_MODE_COUPLES",
+          "TRG_LATENCY_MODE_ONETOALL"
+        ],
+        "data_type": "string",
+        "description": "Trigger latency",
+        "path": "/ch/4/par/ch_trg_latency",
+        "value": "TRG_LATENCY_MODE_NONE"
+      },
+      "ch_trg_mode": {
+        "allowed_values": [
+          "TRIGGER_MODE_NORMAL",
+          "TRIGGER_MODE_COINC",
+          "TRIGGER_MODE_ANTICOINC"
+        ],
+        "data_type": "string",
+        "description": "Trigger mode",
+        "path": "/ch/4/par/ch_trg_mode",
+        "value": "TRIGGER_MODE_NORMAL"
+      },
+      "ch_val_mode": {
+        "allowed_values": [
+          "COUPLE_VAL_MODE_DISABLED",
+          "COUPLE_VAL_MODE_TWIN_ONLY",
+          "COUPLE_VAL_MODE_MBOARD_ONLY",
+          "COUPLE_VAL_MODE_AND",
+          "COUPLE_VAL_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG val.",
+        "path": "/ch/4/par/ch_val_mode",
+        "value": "COUPLE_VAL_MODE_DISABLED"
+      },
+      "ch_veto_src": {
+        "allowed_values": [
+          "VETO_SRC_DISABLED",
+          "VETO_SRC_COMMON",
+          "VETO_SRC_INDIVIDUAL",
+          "VETO_SRC_SATURATION"
+        ],
+        "data_type": "string",
+        "description": "Veto source",
+        "path": "/ch/4/par/ch_veto_src",
+        "value": "VETO_SRC_DISABLED"
+      }
+    },
+    "5": {
+      "ch_bline_fixed": {
+        "data_type": "number",
+        "description": "Fixed Baseline",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/5/par/ch_bline_fixed",
+        "value": "0"
+      },
+      "ch_bline_nsmean": {
+        "allowed_values": [
+          "BLINE_NSMEAN_FIXED",
+          "BLINE_NSMEAN_16",
+          "BLINE_NSMEAN_64",
+          "BLINE_NSMEAN_256",
+          "BLINE_NSMEAN_1024"
+        ],
+        "data_type": "string",
+        "description": "NSBL",
+        "path": "/ch/5/par/ch_bline_nsmean",
+        "value": "BLINE_NSMEAN_256"
+      },
+      "ch_cfd_delay": {
+        "data_type": "number",
+        "description": "CFD Delay",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/5/par/ch_cfd_delay",
+        "value": "6"
+      },
+      "ch_cfd_fraction": {
+        "allowed_values": [
+          "CFD_FRACTLIST_25",
+          "CFD_FRACTLIST_50",
+          "CFD_FRACTLIST_75",
+          "CFD_FRACTLIST_100"
+        ],
+        "data_type": "string",
+        "description": "CFD fraction",
+        "path": "/ch/5/par/ch_cfd_fraction",
+        "value": "CFD_FRACTLIST_75"
+      },
+      "ch_cfd_smoothexp": {
+        "allowed_values": [
+          "CFD_SMOOTH_EXP_1",
+          "CFD_SMOOTH_EXP_2",
+          "CFD_SMOOTH_EXP_4",
+          "CFD_SMOOTH_EXP_8",
+          "CFD_SMOOTH_EXP_16"
+        ],
+        "data_type": "string",
+        "description": "CFD smooth exponent",
+        "path": "/ch/5/par/ch_cfd_smoothexp",
+        "value": "CFD_SMOOTH_EXP_1"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/5/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_discr_mode": {
+        "allowed_values": [
+          "DISCR_MODE_LED",
+          "DISCR_MODE_CFD"
+        ],
+        "data_type": "string",
+        "description": "Discr. mode",
+        "path": "/ch/5/par/ch_discr_mode",
+        "value": "DISCR_MODE_LED"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/5/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_energy_cgain": {
+        "allowed_values": [
+          "CHARGESENS_2.5_FC_LSB_VPP",
+          "CHARGESENS_10_FC_LSB_VPP",
+          "CHARGESENS_40_FC_LSB_VPP",
+          "CHARGESENS_160_FC_LSB_VPP",
+          "CHARGESENS_640_FC_LSB_VPP",
+          "CHARGESENS_2560_FC_LSB_VPP"
+        ],
+        "data_type": "string",
+        "description": "Energy coarse gain",
+        "path": "/ch/5/par/ch_energy_cgain",
+        "value": "CHARGESENS_40_FC_LSB_VPP"
+      },
+      "ch_extras_opt": {
+        "allowed_values": [
+          "EXTRAS_OPT_TT48_BL4",
+          "EXTRAS_OPT_TT48_FLAGS",
+          "EXTRAS_OPT_TT48_FLAGS_FINETT",
+          "EXTRAS_OPT_LOSTTRG_TOTTRG",
+          "EXTRAS_OPT_SBZC_SAZC"
+        ],
+        "data_type": "string",
+        "description": "Extras option",
+        "path": "/ch/5/par/ch_extras_opt",
+        "value": "EXTRAS_OPT_TT48_FLAGS_FINETT"
+      },
+      "ch_gate": {
+        "data_type": "number",
+        "description": "Gate",
+        "increment": "2",
+        "max_value": "32766",
+        "min_value": "4",
+        "path": "/ch/5/par/ch_gate",
+        "value": "300"
+      },
+      "ch_gatepre": {
+        "data_type": "number",
+        "description": "Pre gate",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/5/par/ch_gatepre",
+        "value": "50"
+      },
+      "ch_gateshort": {
+        "data_type": "number",
+        "description": "Gate short",
+        "increment": "2",
+        "max_value": "2046",
+        "min_value": "2",
+        "path": "/ch/5/par/ch_gateshort",
+        "value": "80"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/5/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/5/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_pedestal_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Charge pedestal enable",
+        "path": "/ch/5/par/ch_pedestal_en",
+        "value": "FALSE"
+      },
+      "ch_polarity": {
+        "allowed_values": [
+          "POLARITY_POSITIVE",
+          "POLARITY_NEGATIVE"
+        ],
+        "data_type": "string",
+        "description": "Polarity",
+        "path": "/ch/5/par/ch_polarity",
+        "value": "POLARITY_NEGATIVE"
+      },
+      "ch_pretrg": {
+        "data_type": "number",
+        "description": "Pre TRG",
+        "increment": "8",
+        "max_value": "4088",
+        "min_value": "40",
+        "path": "/ch/5/par/ch_pretrg",
+        "value": "96"
+      },
+      "ch_pu_count_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup counting",
+        "path": "/ch/5/par/ch_pu_count_en",
+        "value": "FALSE"
+      },
+      "ch_pur_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup rejection",
+        "path": "/ch/5/par/ch_pur_en",
+        "value": "FALSE"
+      },
+      "ch_self_trg_enable": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. self trigger enable",
+        "path": "/ch/5/par/ch_self_trg_enable",
+        "value": "TRUE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/5/par/ch_threshold",
+        "value": "100"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/5/par/ch_trg_global_gen",
+        "value": "FALSE"
+      },
+      "ch_trg_holdoff": {
+        "data_type": "number",
+        "description": "TRG hold-off",
+        "increment": "8",
+        "max_value": "524280",
+        "min_value": "0",
+        "path": "/ch/5/par/ch_trg_holdoff",
+        "value": "1024"
+      },
+      "ch_trg_latency": {
+        "allowed_values": [
+          "TRG_LATENCY_MODE_NONE",
+          "TRG_LATENCY_MODE_COUPLES",
+          "TRG_LATENCY_MODE_ONETOALL"
+        ],
+        "data_type": "string",
+        "description": "Trigger latency",
+        "path": "/ch/5/par/ch_trg_latency",
+        "value": "TRG_LATENCY_MODE_NONE"
+      },
+      "ch_trg_mode": {
+        "allowed_values": [
+          "TRIGGER_MODE_NORMAL",
+          "TRIGGER_MODE_COINC",
+          "TRIGGER_MODE_ANTICOINC"
+        ],
+        "data_type": "string",
+        "description": "Trigger mode",
+        "path": "/ch/5/par/ch_trg_mode",
+        "value": "TRIGGER_MODE_NORMAL"
+      },
+      "ch_veto_src": {
+        "allowed_values": [
+          "VETO_SRC_DISABLED",
+          "VETO_SRC_COMMON",
+          "VETO_SRC_INDIVIDUAL",
+          "VETO_SRC_SATURATION"
+        ],
+        "data_type": "string",
+        "description": "Veto source",
+        "path": "/ch/5/par/ch_veto_src",
+        "value": "VETO_SRC_DISABLED"
+      }
+    },
+    "6": {
+      "ch_bline_fixed": {
+        "data_type": "number",
+        "description": "Fixed Baseline",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/6/par/ch_bline_fixed",
+        "value": "0"
+      },
+      "ch_bline_nsmean": {
+        "allowed_values": [
+          "BLINE_NSMEAN_FIXED",
+          "BLINE_NSMEAN_16",
+          "BLINE_NSMEAN_64",
+          "BLINE_NSMEAN_256",
+          "BLINE_NSMEAN_1024"
+        ],
+        "data_type": "string",
+        "description": "NSBL",
+        "path": "/ch/6/par/ch_bline_nsmean",
+        "value": "BLINE_NSMEAN_256"
+      },
+      "ch_cfd_delay": {
+        "data_type": "number",
+        "description": "CFD Delay",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/6/par/ch_cfd_delay",
+        "value": "6"
+      },
+      "ch_cfd_fraction": {
+        "allowed_values": [
+          "CFD_FRACTLIST_25",
+          "CFD_FRACTLIST_50",
+          "CFD_FRACTLIST_75",
+          "CFD_FRACTLIST_100"
+        ],
+        "data_type": "string",
+        "description": "CFD fraction",
+        "path": "/ch/6/par/ch_cfd_fraction",
+        "value": "CFD_FRACTLIST_75"
+      },
+      "ch_cfd_smoothexp": {
+        "allowed_values": [
+          "CFD_SMOOTH_EXP_1",
+          "CFD_SMOOTH_EXP_2",
+          "CFD_SMOOTH_EXP_4",
+          "CFD_SMOOTH_EXP_8",
+          "CFD_SMOOTH_EXP_16"
+        ],
+        "data_type": "string",
+        "description": "CFD smooth exponent",
+        "path": "/ch/6/par/ch_cfd_smoothexp",
+        "value": "CFD_SMOOTH_EXP_1"
+      },
+      "ch_coinc_majlev": {
+        "data_type": "number",
+        "description": "Majority level",
+        "increment": "1",
+        "max_value": "7",
+        "min_value": "0",
+        "path": "/ch/6/par/ch_coinc_majlev",
+        "value": "0"
+      },
+      "ch_coinc_mask": {
+        "data_type": "number",
+        "description": "Coinc. mask",
+        "increment": "1",
+        "max_value": "15",
+        "min_value": "0",
+        "path": "/ch/6/par/ch_coinc_mask",
+        "value": "0"
+      },
+      "ch_coinc_operation": {
+        "allowed_values": [
+          "COINC_OPERATION_OR",
+          "COINC_OPERATION_AND",
+          "COINC_OPERATION_MAJ"
+        ],
+        "data_type": "string",
+        "description": "Coinc. operation",
+        "path": "/ch/6/par/ch_coinc_operation",
+        "value": "COINC_OPERATION_OR"
+      },
+      "ch_coinc_trgext": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Coinc. TRGEXT sens.",
+        "path": "/ch/6/par/ch_coinc_trgext",
+        "value": "FALSE"
+      },
+      "ch_coinc_trgsw": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Coinc. TRGSW sens.",
+        "path": "/ch/6/par/ch_coinc_trgsw",
+        "value": "FALSE"
+      },
+      "ch_couple_trg_mode": {
+        "allowed_values": [
+          "COUPLE_TRG_MODE_DISABLED",
+          "COUPLE_TRG_MODE_AND",
+          "COUPLE_TRG_MODE_EVEN_ONLY",
+          "COUPLE_TRG_MODE_ODD_ONLY",
+          "COUPLE_TRG_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG mode",
+        "path": "/ch/6/par/ch_couple_trg_mode",
+        "value": "COUPLE_TRG_MODE_DISABLED"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/6/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_discr_mode": {
+        "allowed_values": [
+          "DISCR_MODE_LED",
+          "DISCR_MODE_CFD"
+        ],
+        "data_type": "string",
+        "description": "Discr. mode",
+        "path": "/ch/6/par/ch_discr_mode",
+        "value": "DISCR_MODE_LED"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/6/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_energy_cgain": {
+        "allowed_values": [
+          "CHARGESENS_2.5_FC_LSB_VPP",
+          "CHARGESENS_10_FC_LSB_VPP",
+          "CHARGESENS_40_FC_LSB_VPP",
+          "CHARGESENS_160_FC_LSB_VPP",
+          "CHARGESENS_640_FC_LSB_VPP",
+          "CHARGESENS_2560_FC_LSB_VPP"
+        ],
+        "data_type": "string",
+        "description": "Energy coarse gain",
+        "path": "/ch/6/par/ch_energy_cgain",
+        "value": "CHARGESENS_40_FC_LSB_VPP"
+      },
+      "ch_extras_opt": {
+        "allowed_values": [
+          "EXTRAS_OPT_TT48_BL4",
+          "EXTRAS_OPT_TT48_FLAGS",
+          "EXTRAS_OPT_TT48_FLAGS_FINETT",
+          "EXTRAS_OPT_LOSTTRG_TOTTRG",
+          "EXTRAS_OPT_SBZC_SAZC"
+        ],
+        "data_type": "string",
+        "description": "Extras option",
+        "path": "/ch/6/par/ch_extras_opt",
+        "value": "EXTRAS_OPT_TT48_FLAGS_FINETT"
+      },
+      "ch_gate": {
+        "data_type": "number",
+        "description": "Gate",
+        "increment": "2",
+        "max_value": "32766",
+        "min_value": "4",
+        "path": "/ch/6/par/ch_gate",
+        "value": "300"
+      },
+      "ch_gatepre": {
+        "data_type": "number",
+        "description": "Pre gate",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/6/par/ch_gatepre",
+        "value": "50"
+      },
+      "ch_gateshort": {
+        "data_type": "number",
+        "description": "Gate short",
+        "increment": "2",
+        "max_value": "2046",
+        "min_value": "2",
+        "path": "/ch/6/par/ch_gateshort",
+        "value": "80"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/6/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/6/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_pedestal_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Charge pedestal enable",
+        "path": "/ch/6/par/ch_pedestal_en",
+        "value": "FALSE"
+      },
+      "ch_polarity": {
+        "allowed_values": [
+          "POLARITY_POSITIVE",
+          "POLARITY_NEGATIVE"
+        ],
+        "data_type": "string",
+        "description": "Polarity",
+        "path": "/ch/6/par/ch_polarity",
+        "value": "POLARITY_NEGATIVE"
+      },
+      "ch_pretrg": {
+        "data_type": "number",
+        "description": "Pre TRG",
+        "increment": "8",
+        "max_value": "4088",
+        "min_value": "40",
+        "path": "/ch/6/par/ch_pretrg",
+        "value": "96"
+      },
+      "ch_pu_count_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup counting",
+        "path": "/ch/6/par/ch_pu_count_en",
+        "value": "FALSE"
+      },
+      "ch_pur_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup rejection",
+        "path": "/ch/6/par/ch_pur_en",
+        "value": "FALSE"
+      },
+      "ch_self_trg_enable": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. self trigger enable",
+        "path": "/ch/6/par/ch_self_trg_enable",
+        "value": "TRUE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/6/par/ch_threshold",
+        "value": "100"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/6/par/ch_trg_global_gen",
+        "value": "FALSE"
+      },
+      "ch_trg_holdoff": {
+        "data_type": "number",
+        "description": "TRG hold-off",
+        "increment": "8",
+        "max_value": "524280",
+        "min_value": "0",
+        "path": "/ch/6/par/ch_trg_holdoff",
+        "value": "1024"
+      },
+      "ch_trg_latency": {
+        "allowed_values": [
+          "TRG_LATENCY_MODE_NONE",
+          "TRG_LATENCY_MODE_COUPLES",
+          "TRG_LATENCY_MODE_ONETOALL"
+        ],
+        "data_type": "string",
+        "description": "Trigger latency",
+        "path": "/ch/6/par/ch_trg_latency",
+        "value": "TRG_LATENCY_MODE_NONE"
+      },
+      "ch_trg_mode": {
+        "allowed_values": [
+          "TRIGGER_MODE_NORMAL",
+          "TRIGGER_MODE_COINC",
+          "TRIGGER_MODE_ANTICOINC"
+        ],
+        "data_type": "string",
+        "description": "Trigger mode",
+        "path": "/ch/6/par/ch_trg_mode",
+        "value": "TRIGGER_MODE_NORMAL"
+      },
+      "ch_val_mode": {
+        "allowed_values": [
+          "COUPLE_VAL_MODE_DISABLED",
+          "COUPLE_VAL_MODE_TWIN_ONLY",
+          "COUPLE_VAL_MODE_MBOARD_ONLY",
+          "COUPLE_VAL_MODE_AND",
+          "COUPLE_VAL_MODE_OR"
+        ],
+        "data_type": "string",
+        "description": "Couple TRG val.",
+        "path": "/ch/6/par/ch_val_mode",
+        "value": "COUPLE_VAL_MODE_DISABLED"
+      },
+      "ch_veto_src": {
+        "allowed_values": [
+          "VETO_SRC_DISABLED",
+          "VETO_SRC_COMMON",
+          "VETO_SRC_INDIVIDUAL",
+          "VETO_SRC_SATURATION"
+        ],
+        "data_type": "string",
+        "description": "Veto source",
+        "path": "/ch/6/par/ch_veto_src",
+        "value": "VETO_SRC_DISABLED"
+      }
+    },
+    "7": {
+      "ch_bline_fixed": {
+        "data_type": "number",
+        "description": "Fixed Baseline",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/7/par/ch_bline_fixed",
+        "value": "0"
+      },
+      "ch_bline_nsmean": {
+        "allowed_values": [
+          "BLINE_NSMEAN_FIXED",
+          "BLINE_NSMEAN_16",
+          "BLINE_NSMEAN_64",
+          "BLINE_NSMEAN_256",
+          "BLINE_NSMEAN_1024"
+        ],
+        "data_type": "string",
+        "description": "NSBL",
+        "path": "/ch/7/par/ch_bline_nsmean",
+        "value": "BLINE_NSMEAN_256"
+      },
+      "ch_cfd_delay": {
+        "data_type": "number",
+        "description": "CFD Delay",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/7/par/ch_cfd_delay",
+        "value": "6"
+      },
+      "ch_cfd_fraction": {
+        "allowed_values": [
+          "CFD_FRACTLIST_25",
+          "CFD_FRACTLIST_50",
+          "CFD_FRACTLIST_75",
+          "CFD_FRACTLIST_100"
+        ],
+        "data_type": "string",
+        "description": "CFD fraction",
+        "path": "/ch/7/par/ch_cfd_fraction",
+        "value": "CFD_FRACTLIST_75"
+      },
+      "ch_cfd_smoothexp": {
+        "allowed_values": [
+          "CFD_SMOOTH_EXP_1",
+          "CFD_SMOOTH_EXP_2",
+          "CFD_SMOOTH_EXP_4",
+          "CFD_SMOOTH_EXP_8",
+          "CFD_SMOOTH_EXP_16"
+        ],
+        "data_type": "string",
+        "description": "CFD smooth exponent",
+        "path": "/ch/7/par/ch_cfd_smoothexp",
+        "value": "CFD_SMOOTH_EXP_1"
+      },
+      "ch_dcoffset": {
+        "data_type": "number",
+        "description": "DC offset",
+        "increment": "0.1",
+        "max_value": "100.0",
+        "min_value": "0.0",
+        "path": "/ch/7/par/ch_dcoffset",
+        "value": "20.0"
+      },
+      "ch_discr_mode": {
+        "allowed_values": [
+          "DISCR_MODE_LED",
+          "DISCR_MODE_CFD"
+        ],
+        "data_type": "string",
+        "description": "Discr. mode",
+        "path": "/ch/7/par/ch_discr_mode",
+        "value": "DISCR_MODE_LED"
+      },
+      "ch_enabled": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. enable",
+        "path": "/ch/7/par/ch_enabled",
+        "value": "TRUE"
+      },
+      "ch_energy_cgain": {
+        "allowed_values": [
+          "CHARGESENS_2.5_FC_LSB_VPP",
+          "CHARGESENS_10_FC_LSB_VPP",
+          "CHARGESENS_40_FC_LSB_VPP",
+          "CHARGESENS_160_FC_LSB_VPP",
+          "CHARGESENS_640_FC_LSB_VPP",
+          "CHARGESENS_2560_FC_LSB_VPP"
+        ],
+        "data_type": "string",
+        "description": "Energy coarse gain",
+        "path": "/ch/7/par/ch_energy_cgain",
+        "value": "CHARGESENS_40_FC_LSB_VPP"
+      },
+      "ch_extras_opt": {
+        "allowed_values": [
+          "EXTRAS_OPT_TT48_BL4",
+          "EXTRAS_OPT_TT48_FLAGS",
+          "EXTRAS_OPT_TT48_FLAGS_FINETT",
+          "EXTRAS_OPT_LOSTTRG_TOTTRG",
+          "EXTRAS_OPT_SBZC_SAZC"
+        ],
+        "data_type": "string",
+        "description": "Extras option",
+        "path": "/ch/7/par/ch_extras_opt",
+        "value": "EXTRAS_OPT_TT48_FLAGS_FINETT"
+      },
+      "ch_gate": {
+        "data_type": "number",
+        "description": "Gate",
+        "increment": "2",
+        "max_value": "32766",
+        "min_value": "4",
+        "path": "/ch/7/par/ch_gate",
+        "value": "300"
+      },
+      "ch_gatepre": {
+        "data_type": "number",
+        "description": "Pre gate",
+        "increment": "2",
+        "max_value": "510",
+        "min_value": "0",
+        "path": "/ch/7/par/ch_gatepre",
+        "value": "50"
+      },
+      "ch_gateshort": {
+        "data_type": "number",
+        "description": "Gate short",
+        "increment": "2",
+        "max_value": "2046",
+        "min_value": "2",
+        "path": "/ch/7/par/ch_gateshort",
+        "value": "80"
+      },
+      "ch_indyn": {
+        "allowed_values": [
+          "INDYN_2_0_VPP",
+          "INDYN_0_5_VPP"
+        ],
+        "data_type": "string",
+        "description": "Input Dynamics",
+        "path": "/ch/7/par/ch_indyn",
+        "value": "INDYN_2_0_VPP"
+      },
+      "ch_out_propagate": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "OUT propagation",
+        "path": "/ch/7/par/ch_out_propagate",
+        "value": "FALSE"
+      },
+      "ch_pedestal_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Charge pedestal enable",
+        "path": "/ch/7/par/ch_pedestal_en",
+        "value": "FALSE"
+      },
+      "ch_polarity": {
+        "allowed_values": [
+          "POLARITY_POSITIVE",
+          "POLARITY_NEGATIVE"
+        ],
+        "data_type": "string",
+        "description": "Polarity",
+        "path": "/ch/7/par/ch_polarity",
+        "value": "POLARITY_NEGATIVE"
+      },
+      "ch_pretrg": {
+        "data_type": "number",
+        "description": "Pre TRG",
+        "increment": "8",
+        "max_value": "4088",
+        "min_value": "40",
+        "path": "/ch/7/par/ch_pretrg",
+        "value": "96"
+      },
+      "ch_pu_count_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup counting",
+        "path": "/ch/7/par/ch_pu_count_en",
+        "value": "FALSE"
+      },
+      "ch_pur_en": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Pileup rejection",
+        "path": "/ch/7/par/ch_pur_en",
+        "value": "FALSE"
+      },
+      "ch_self_trg_enable": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Ch. self trigger enable",
+        "path": "/ch/7/par/ch_self_trg_enable",
+        "value": "TRUE"
+      },
+      "ch_threshold": {
+        "data_type": "number",
+        "description": "Threshold",
+        "increment": "1",
+        "max_value": "16383",
+        "min_value": "0",
+        "path": "/ch/7/par/ch_threshold",
+        "value": "100"
+      },
+      "ch_trg_global_gen": {
+        "allowed_values": [
+          "FALSE",
+          "TRUE"
+        ],
+        "data_type": "string",
+        "description": "Global TRG gen.",
+        "path": "/ch/7/par/ch_trg_global_gen",
+        "value": "FALSE"
+      },
+      "ch_trg_holdoff": {
+        "data_type": "number",
+        "description": "TRG hold-off",
+        "increment": "8",
+        "max_value": "524280",
+        "min_value": "0",
+        "path": "/ch/7/par/ch_trg_holdoff",
+        "value": "1024"
+      },
+      "ch_trg_latency": {
+        "allowed_values": [
+          "TRG_LATENCY_MODE_NONE",
+          "TRG_LATENCY_MODE_COUPLES",
+          "TRG_LATENCY_MODE_ONETOALL"
+        ],
+        "data_type": "string",
+        "description": "Trigger latency",
+        "path": "/ch/7/par/ch_trg_latency",
+        "value": "TRG_LATENCY_MODE_NONE"
+      },
+      "ch_trg_mode": {
+        "allowed_values": [
+          "TRIGGER_MODE_NORMAL",
+          "TRIGGER_MODE_COINC",
+          "TRIGGER_MODE_ANTICOINC"
+        ],
+        "data_type": "string",
+        "description": "Trigger mode",
+        "path": "/ch/7/par/ch_trg_mode",
+        "value": "TRIGGER_MODE_NORMAL"
+      },
+      "ch_veto_src": {
+        "allowed_values": [
+          "VETO_SRC_DISABLED",
+          "VETO_SRC_COMMON",
+          "VETO_SRC_INDIVIDUAL",
+          "VETO_SRC_SATURATION"
+        ],
+        "data_type": "string",
+        "description": "Veto source",
+        "path": "/ch/7/par/ch_veto_src",
+        "value": "VETO_SRC_DISABLED"
+      }
+    }
+  },
+  "module_parameters": {
+    "autoflush_enable": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "Autoflush En",
+      "path": "/par/autoflush_enable",
+      "value": "TRUE"
+    },
+    "coinc_trgout": {
+      "data_type": "number",
+      "description": "TRG OUT length",
+      "increment": "8",
+      "max_value": "8184",
+      "min_value": "0",
+      "path": "/par/coinc_trgout",
+      "value": "96"
+    },
+    "dt_ext_clock": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "DT External clock source",
+      "path": "/par/dt_ext_clock",
+      "value": "FALSE"
+    },
+    "extras": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "Extras",
+      "path": "/par/extras",
+      "value": "TRUE"
+    },
+    "iolevel": {
+      "allowed_values": [
+        "FPIOTYPE_NIM",
+        "FPIOTYPE_TTL"
+      ],
+      "data_type": "string",
+      "description": "I/O Level",
+      "path": "/par/iolevel",
+      "value": "FPIOTYPE_NIM"
+    },
+    "out_selection": {
+      "allowed_values": [
+        "OUT_PROPAGATION_LEVEL0",
+        "OUT_PROPAGATION_LEVEL1",
+        "OUT_PROPAGATION_TRIGGER",
+        "OUT_PROPAGATION_RUN",
+        "OUT_PROPAGATION_DELAYED_RUN",
+        "OUT_PROPAGATION_SAMPLE_CLK",
+        "OUT_PROPAGATION_PLL_CLK",
+        "OUT_PROPAGATION_BUSY",
+        "OUT_PROPAGATION_PLL_UNLOCK",
+        "OUT_PROPAGATION_VPROBE",
+        "OUT_PROPAGATION_SYNCIN"
+      ],
+      "data_type": "string",
+      "description": "Out Selection",
+      "path": "/par/out_selection",
+      "value": "OUT_PROPAGATION_TRIGGER"
+    },
+    "reclen": {
+      "data_type": "number",
+      "description": "Record Length",
+      "increment": "16",
+      "max_value": "131056",
+      "min_value": "16",
+      "path": "/par/reclen",
+      "value": "992"
+    },
+    "start_delay": {
+      "data_type": "number",
+      "description": "Sync. start delay",
+      "increment": "16",
+      "max_value": "4080",
+      "min_value": "0",
+      "path": "/par/start_delay",
+      "value": "0"
+    },
+    "startmode": {
+      "allowed_values": [
+        "START_MODE_SW",
+        "START_MODE_S_IN",
+        "START_MODE_FIRST_TRG"
+      ],
+      "data_type": "string",
+      "description": "Start mode",
+      "path": "/par/startmode",
+      "value": "START_MODE_SW"
+    },
+    "trg_ext_enable": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "Ext. TRG enable",
+      "path": "/par/trg_ext_enable",
+      "value": "FALSE"
+    },
+    "trg_ext_out_propagate": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "Ext. TRG propagate",
+      "path": "/par/trg_ext_out_propagate",
+      "value": "FALSE"
+    },
+    "trg_sw_enable": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "SW TRG enable",
+      "path": "/par/trg_sw_enable",
+      "value": "TRUE"
+    },
+    "trg_sw_out_propagate": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "SW TRG propagate",
+      "path": "/par/trg_sw_out_propagate",
+      "value": "FALSE"
+    },
+    "trgin_level_sync": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "TRG IN level sync.",
+      "path": "/par/trgin_level_sync",
+      "value": "FALSE"
+    },
+    "trgin_to_mezzanines": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "TRG IN to mezzanines",
+      "path": "/par/trgin_to_mezzanines",
+      "value": "FALSE"
+    },
+    "trgval_propagate": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "TRGVAL propagate",
+      "path": "/par/trgval_propagate",
+      "value": "TRUE"
+    },
+    "waveforms": {
+      "allowed_values": [
+        "FALSE",
+        "TRUE"
+      ],
+      "data_type": "string",
+      "description": "Waveforms",
+      "path": "/par/waveforms",
+      "value": "FALSE"
+    }
+  },
+  "readout_data_format": [
+    {
+      "dim": 0,
+      "name": "CHANNEL",
+      "type": "U8"
+    },
+    {
+      "dim": 0,
+      "name": "TIMESTAMP",
+      "type": "U64"
+    },
+    {
+      "dim": 0,
+      "name": "TIMESTAMP_NS",
+      "type": "DOUBLE"
+    },
+    {
+      "dim": 0,
+      "name": "ENERGY",
+      "type": "U16"
+    },
+    {
+      "dim": 0,
+      "name": "ENERGY_SHORT",
+      "type": "I16"
+    },
+    {
+      "dim": 0,
+      "name": "FLAGS",
+      "type": "U32"
+    },
+    {
+      "dim": 1,
+      "name": "ANALOG_PROBE_1",
+      "type": "I16"
+    },
+    {
+      "dim": 0,
+      "name": "ANALOG_PROBE_1_TYPE",
+      "type": "I32"
+    },
+    {
+      "dim": 1,
+      "name": "ANALOG_PROBE_2",
+      "type": "I16"
+    },
+    {
+      "dim": 0,
+      "name": "ANALOG_PROBE_2_TYPE",
+      "type": "I32"
+    },
+    {
+      "dim": 1,
+      "name": "DIGITAL_PROBE_1",
+      "type": "U8"
+    },
+    {
+      "dim": 0,
+      "name": "DIGITAL_PROBE_1_TYPE",
+      "type": "I32"
+    },
+    {
+      "dim": 1,
+      "name": "DIGITAL_PROBE_2",
+      "type": "U8"
+    },
+    {
+      "dim": 0,
+      "name": "DIGITAL_PROBE_2_TYPE",
+      "type": "I32"
+    },
+    {
+      "dim": 0,
+      "name": "WAVEFORM_SIZE",
+      "type": "SIZE_T"
+    },
+    {
+      "dim": 0,
+      "name": "EVENT_SIZE",
+      "type": "U32"
+    }
+  ],
+  "trace_parameters": {
+    "0": {
+      "vtrace_probe": {
+        "allowed_values": [
+          "VPROBE_INPUT",
+          "VPROBE_CFD"
+        ],
+        "data_type": "string",
+        "description": "Virtual Probe",
+        "path": "/vtrace/0/par/vtrace_probe",
+        "value": "VPROBE_INPUT"
+      }
+    },
+    "1": {
+      "vtrace_probe": {
+        "allowed_values": [
+          "VPROBE_NONE",
+          "VPROBE_BASELINE",
+          "VPROBE_CFD"
+        ],
+        "data_type": "string",
+        "description": "Virtual Probe",
+        "path": "/vtrace/1/par/vtrace_probe",
+        "value": "VPROBE_NONE"
+      }
+    },
+    "2": {
+      "vtrace_probe": {
+        "allowed_values": [
+          "VPROBE_GATE",
+          "VPROBE_OVERTHRESHOLD",
+          "VPROBE_TRGOUT",
+          "VPROBE_TRGVALWIN",
+          "VPROBE_PILEUP",
+          "VPROBE_COINCIDENCE",
+          "VPROBE_TRIGGER"
+        ],
+        "data_type": "string",
+        "description": "Virtual Probe",
+        "path": "/vtrace/2/par/vtrace_probe",
+        "value": "VPROBE_GATE"
+      }
+    },
+    "3": {
+      "vtrace_probe": {
+        "allowed_values": [
+          "VPROBE_GATESHORT",
+          "VPROBE_OVERTHRESHOLD",
+          "VPROBE_TRGVAL",
+          "VPROBE_TRGHOLDOFF",
+          "VPROBE_PILEUP_TRIGGER",
+          "VPROBE_TRIGGER"
+        ],
+        "data_type": "string",
+        "description": "Virtual Probe",
+        "path": "/vtrace/3/par/vtrace_probe",
+        "value": "VPROBE_GATESHORT"
+      }
+    }
+  }
+}

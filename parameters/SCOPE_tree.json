@@ -1,0 +1,3599 @@
+{
+    "ch": {
+        "0": {
+            "handle": 313,
+            "par": {
+                "ch_adc_temperature": {
+                    "accessmode": {
+                        "handle": 417,
+                        "value": "READ_ONLY"
+                    },
+                    "datatype": {
+                        "handle": 418,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 419,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 416,
+                        "value": "ADC temperature"
+                    },
+                    "expuom": {
+                        "handle": 424,
+                        "value": "0"
+                    },
+                    "handle": 415,
+                    "increment": {
+                        "handle": 422,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 421,
+                        "value": "255"
+                    },
+                    "minvalue": {
+                        "handle": 420,
+                        "value": "0"
+                    },
+                    "uom": {
+                        "handle": 423,
+                        "value": "deg C"
+                    },
+                    "value": "56"
+                },
+                "ch_couple_trg_mode": {
+                    "accessmode": {
+                        "handle": 384,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 389,
+                            "value": "COUPLE_TRG_MODE_AND"
+                        },
+                        "1": {
+                            "handle": 390,
+                            "value": "COUPLE_TRG_MODE_EVEN_ONLY"
+                        },
+                        "2": {
+                            "handle": 391,
+                            "value": "COUPLE_TRG_MODE_ODD_ONLY"
+                        },
+                        "3": {
+                            "handle": 392,
+                            "value": "COUPLE_TRG_MODE_OR"
+                        },
+                        "handle": 388,
+                        "value": "4"
+                    },
+                    "datatype": {
+                        "handle": 385,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 383,
+                        "value": "Couple TRG mode"
+                    },
+                    "handle": 382,
+                    "multiplevalue": {
+                        "handle": 387,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 386,
+                        "value": "false"
+                    },
+                    "value": "COUPLE_TRG_MODE_OR"
+                },
+                "ch_dcoffset": {
+                    "accessmode": {
+                        "handle": 318,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 319,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 321,
+                        "value": "20"
+                    },
+                    "description": {
+                        "handle": 317,
+                        "value": "DC offset"
+                    },
+                    "expuom": {
+                        "handle": 326,
+                        "value": "0"
+                    },
+                    "handle": 315,
+                    "increment": {
+                        "handle": 324,
+                        "value": "0.1"
+                    },
+                    "maxvalue": {
+                        "handle": 323,
+                        "value": "100.0"
+                    },
+                    "minvalue": {
+                        "handle": 322,
+                        "value": "0.0"
+                    },
+                    "setinrun": {
+                        "handle": 320,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 325,
+                        "value": "%"
+                    },
+                    "value": "20.0"
+                },
+                "ch_enabled": {
+                    "accessmode": {
+                        "handle": 357,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 362,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 363,
+                            "value": "TRUE"
+                        },
+                        "handle": 361,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 358,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 356,
+                        "value": "Ch. enable"
+                    },
+                    "handle": 355,
+                    "multiplevalue": {
+                        "handle": 360,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 359,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "ch_indyn": {
+                    "accessmode": {
+                        "handle": 337,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 342,
+                            "value": "INDYN_2_0_VPP"
+                        },
+                        "1": {
+                            "handle": 343,
+                            "value": "INDYN_0_5_VPP"
+                        },
+                        "handle": 341,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 338,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 336,
+                        "value": "Input Dynamics"
+                    },
+                    "handle": 335,
+                    "multiplevalue": {
+                        "handle": 340,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 339,
+                        "value": "true"
+                    },
+                    "value": "INDYN_2_0_VPP"
+                },
+                "ch_out_propagate": {
+                    "accessmode": {
+                        "handle": 375,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 380,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 381,
+                            "value": "TRUE"
+                        },
+                        "handle": 379,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 376,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 374,
+                        "value": "OUT propagation"
+                    },
+                    "handle": 373,
+                    "multiplevalue": {
+                        "handle": 378,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 377,
+                        "value": "true"
+                    },
+                    "value": "FALSE"
+                },
+                "ch_threshold": {
+                    "accessmode": {
+                        "handle": 346,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 347,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 349,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 345,
+                        "value": "Threshold"
+                    },
+                    "expuom": {
+                        "handle": 354,
+                        "value": "0"
+                    },
+                    "handle": 344,
+                    "increment": {
+                        "handle": 352,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 351,
+                        "value": "16383"
+                    },
+                    "minvalue": {
+                        "handle": 350,
+                        "value": "0"
+                    },
+                    "setinrun": {
+                        "handle": 348,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 353,
+                        "value": "LSB"
+                    },
+                    "value": "0"
+                },
+                "ch_trg_global_gen": {
+                    "accessmode": {
+                        "handle": 366,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 371,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 372,
+                            "value": "TRUE"
+                        },
+                        "handle": 370,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 367,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 365,
+                        "value": "Global TRG gen."
+                    },
+                    "handle": 364,
+                    "multiplevalue": {
+                        "handle": 369,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 368,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "handle": 316
+            }
+        },
+        "1": {
+            "handle": 433,
+            "par": {
+                "ch_adc_temperature": {
+                    "accessmode": {
+                        "handle": 525,
+                        "value": "READ_ONLY"
+                    },
+                    "datatype": {
+                        "handle": 526,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 527,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 524,
+                        "value": "ADC temperature"
+                    },
+                    "expuom": {
+                        "handle": 532,
+                        "value": "0"
+                    },
+                    "handle": 523,
+                    "increment": {
+                        "handle": 530,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 529,
+                        "value": "255"
+                    },
+                    "minvalue": {
+                        "handle": 528,
+                        "value": "0"
+                    },
+                    "uom": {
+                        "handle": 531,
+                        "value": "deg C"
+                    },
+                    "value": "56"
+                },
+                "ch_dcoffset": {
+                    "accessmode": {
+                        "handle": 437,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 438,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 440,
+                        "value": "20"
+                    },
+                    "description": {
+                        "handle": 436,
+                        "value": "DC offset"
+                    },
+                    "expuom": {
+                        "handle": 445,
+                        "value": "0"
+                    },
+                    "handle": 434,
+                    "increment": {
+                        "handle": 443,
+                        "value": "0.1"
+                    },
+                    "maxvalue": {
+                        "handle": 442,
+                        "value": "100.0"
+                    },
+                    "minvalue": {
+                        "handle": 441,
+                        "value": "0.0"
+                    },
+                    "setinrun": {
+                        "handle": 439,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 444,
+                        "value": "%"
+                    },
+                    "value": "20.0"
+                },
+                "ch_enabled": {
+                    "accessmode": {
+                        "handle": 476,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 481,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 482,
+                            "value": "TRUE"
+                        },
+                        "handle": 480,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 477,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 475,
+                        "value": "Ch. enable"
+                    },
+                    "handle": 474,
+                    "multiplevalue": {
+                        "handle": 479,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 478,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "ch_indyn": {
+                    "accessmode": {
+                        "handle": 456,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 461,
+                            "value": "INDYN_2_0_VPP"
+                        },
+                        "1": {
+                            "handle": 462,
+                            "value": "INDYN_0_5_VPP"
+                        },
+                        "handle": 460,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 457,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 455,
+                        "value": "Input Dynamics"
+                    },
+                    "handle": 454,
+                    "multiplevalue": {
+                        "handle": 459,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 458,
+                        "value": "true"
+                    },
+                    "value": "INDYN_2_0_VPP"
+                },
+                "ch_out_propagate": {
+                    "accessmode": {
+                        "handle": 494,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 499,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 500,
+                            "value": "TRUE"
+                        },
+                        "handle": 498,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 495,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 493,
+                        "value": "OUT propagation"
+                    },
+                    "handle": 492,
+                    "multiplevalue": {
+                        "handle": 497,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 496,
+                        "value": "true"
+                    },
+                    "value": "FALSE"
+                },
+                "ch_threshold": {
+                    "accessmode": {
+                        "handle": 465,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 466,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 468,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 464,
+                        "value": "Threshold"
+                    },
+                    "expuom": {
+                        "handle": 473,
+                        "value": "0"
+                    },
+                    "handle": 463,
+                    "increment": {
+                        "handle": 471,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 470,
+                        "value": "16383"
+                    },
+                    "minvalue": {
+                        "handle": 469,
+                        "value": "0"
+                    },
+                    "setinrun": {
+                        "handle": 467,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 472,
+                        "value": "LSB"
+                    },
+                    "value": "0"
+                },
+                "ch_trg_global_gen": {
+                    "accessmode": {
+                        "handle": 485,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 490,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 491,
+                            "value": "TRUE"
+                        },
+                        "handle": 489,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 486,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 484,
+                        "value": "Global TRG gen."
+                    },
+                    "handle": 483,
+                    "multiplevalue": {
+                        "handle": 488,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 487,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "handle": 435
+            }
+        },
+        "2": {
+            "handle": 541,
+            "par": {
+                "ch_adc_temperature": {
+                    "accessmode": {
+                        "handle": 644,
+                        "value": "READ_ONLY"
+                    },
+                    "datatype": {
+                        "handle": 645,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 646,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 643,
+                        "value": "ADC temperature"
+                    },
+                    "expuom": {
+                        "handle": 651,
+                        "value": "0"
+                    },
+                    "handle": 642,
+                    "increment": {
+                        "handle": 649,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 648,
+                        "value": "255"
+                    },
+                    "minvalue": {
+                        "handle": 647,
+                        "value": "0"
+                    },
+                    "uom": {
+                        "handle": 650,
+                        "value": "deg C"
+                    },
+                    "value": "56"
+                },
+                "ch_couple_trg_mode": {
+                    "accessmode": {
+                        "handle": 611,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 616,
+                            "value": "COUPLE_TRG_MODE_AND"
+                        },
+                        "1": {
+                            "handle": 617,
+                            "value": "COUPLE_TRG_MODE_EVEN_ONLY"
+                        },
+                        "2": {
+                            "handle": 618,
+                            "value": "COUPLE_TRG_MODE_ODD_ONLY"
+                        },
+                        "3": {
+                            "handle": 619,
+                            "value": "COUPLE_TRG_MODE_OR"
+                        },
+                        "handle": 615,
+                        "value": "4"
+                    },
+                    "datatype": {
+                        "handle": 612,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 610,
+                        "value": "Couple TRG mode"
+                    },
+                    "handle": 609,
+                    "multiplevalue": {
+                        "handle": 614,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 613,
+                        "value": "false"
+                    },
+                    "value": "COUPLE_TRG_MODE_OR"
+                },
+                "ch_dcoffset": {
+                    "accessmode": {
+                        "handle": 545,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 546,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 548,
+                        "value": "20"
+                    },
+                    "description": {
+                        "handle": 544,
+                        "value": "DC offset"
+                    },
+                    "expuom": {
+                        "handle": 553,
+                        "value": "0"
+                    },
+                    "handle": 542,
+                    "increment": {
+                        "handle": 551,
+                        "value": "0.1"
+                    },
+                    "maxvalue": {
+                        "handle": 550,
+                        "value": "100.0"
+                    },
+                    "minvalue": {
+                        "handle": 549,
+                        "value": "0.0"
+                    },
+                    "setinrun": {
+                        "handle": 547,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 552,
+                        "value": "%"
+                    },
+                    "value": "20.0"
+                },
+                "ch_enabled": {
+                    "accessmode": {
+                        "handle": 584,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 589,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 590,
+                            "value": "TRUE"
+                        },
+                        "handle": 588,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 585,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 583,
+                        "value": "Ch. enable"
+                    },
+                    "handle": 582,
+                    "multiplevalue": {
+                        "handle": 587,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 586,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "ch_indyn": {
+                    "accessmode": {
+                        "handle": 564,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 569,
+                            "value": "INDYN_2_0_VPP"
+                        },
+                        "1": {
+                            "handle": 570,
+                            "value": "INDYN_0_5_VPP"
+                        },
+                        "handle": 568,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 565,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 563,
+                        "value": "Input Dynamics"
+                    },
+                    "handle": 562,
+                    "multiplevalue": {
+                        "handle": 567,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 566,
+                        "value": "true"
+                    },
+                    "value": "INDYN_2_0_VPP"
+                },
+                "ch_out_propagate": {
+                    "accessmode": {
+                        "handle": 602,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 607,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 608,
+                            "value": "TRUE"
+                        },
+                        "handle": 606,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 603,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 601,
+                        "value": "OUT propagation"
+                    },
+                    "handle": 600,
+                    "multiplevalue": {
+                        "handle": 605,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 604,
+                        "value": "true"
+                    },
+                    "value": "FALSE"
+                },
+                "ch_threshold": {
+                    "accessmode": {
+                        "handle": 573,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 574,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 576,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 572,
+                        "value": "Threshold"
+                    },
+                    "expuom": {
+                        "handle": 581,
+                        "value": "0"
+                    },
+                    "handle": 571,
+                    "increment": {
+                        "handle": 579,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 578,
+                        "value": "16383"
+                    },
+                    "minvalue": {
+                        "handle": 577,
+                        "value": "0"
+                    },
+                    "setinrun": {
+                        "handle": 575,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 580,
+                        "value": "LSB"
+                    },
+                    "value": "0"
+                },
+                "ch_trg_global_gen": {
+                    "accessmode": {
+                        "handle": 593,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 598,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 599,
+                            "value": "TRUE"
+                        },
+                        "handle": 597,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 594,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 592,
+                        "value": "Global TRG gen."
+                    },
+                    "handle": 591,
+                    "multiplevalue": {
+                        "handle": 596,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 595,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "handle": 543
+            }
+        },
+        "3": {
+            "handle": 660,
+            "par": {
+                "ch_adc_temperature": {
+                    "accessmode": {
+                        "handle": 752,
+                        "value": "READ_ONLY"
+                    },
+                    "datatype": {
+                        "handle": 753,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 754,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 751,
+                        "value": "ADC temperature"
+                    },
+                    "expuom": {
+                        "handle": 759,
+                        "value": "0"
+                    },
+                    "handle": 750,
+                    "increment": {
+                        "handle": 757,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 756,
+                        "value": "255"
+                    },
+                    "minvalue": {
+                        "handle": 755,
+                        "value": "0"
+                    },
+                    "uom": {
+                        "handle": 758,
+                        "value": "deg C"
+                    },
+                    "value": "56"
+                },
+                "ch_dcoffset": {
+                    "accessmode": {
+                        "handle": 664,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 665,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 667,
+                        "value": "20"
+                    },
+                    "description": {
+                        "handle": 663,
+                        "value": "DC offset"
+                    },
+                    "expuom": {
+                        "handle": 672,
+                        "value": "0"
+                    },
+                    "handle": 661,
+                    "increment": {
+                        "handle": 670,
+                        "value": "0.1"
+                    },
+                    "maxvalue": {
+                        "handle": 669,
+                        "value": "100.0"
+                    },
+                    "minvalue": {
+                        "handle": 668,
+                        "value": "0.0"
+                    },
+                    "setinrun": {
+                        "handle": 666,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 671,
+                        "value": "%"
+                    },
+                    "value": "20.0"
+                },
+                "ch_enabled": {
+                    "accessmode": {
+                        "handle": 703,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 708,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 709,
+                            "value": "TRUE"
+                        },
+                        "handle": 707,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 704,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 702,
+                        "value": "Ch. enable"
+                    },
+                    "handle": 701,
+                    "multiplevalue": {
+                        "handle": 706,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 705,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "ch_indyn": {
+                    "accessmode": {
+                        "handle": 683,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 688,
+                            "value": "INDYN_2_0_VPP"
+                        },
+                        "1": {
+                            "handle": 689,
+                            "value": "INDYN_0_5_VPP"
+                        },
+                        "handle": 687,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 684,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 682,
+                        "value": "Input Dynamics"
+                    },
+                    "handle": 681,
+                    "multiplevalue": {
+                        "handle": 686,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 685,
+                        "value": "true"
+                    },
+                    "value": "INDYN_2_0_VPP"
+                },
+                "ch_out_propagate": {
+                    "accessmode": {
+                        "handle": 721,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 726,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 727,
+                            "value": "TRUE"
+                        },
+                        "handle": 725,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 722,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 720,
+                        "value": "OUT propagation"
+                    },
+                    "handle": 719,
+                    "multiplevalue": {
+                        "handle": 724,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 723,
+                        "value": "true"
+                    },
+                    "value": "FALSE"
+                },
+                "ch_threshold": {
+                    "accessmode": {
+                        "handle": 692,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 693,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 695,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 691,
+                        "value": "Threshold"
+                    },
+                    "expuom": {
+                        "handle": 700,
+                        "value": "0"
+                    },
+                    "handle": 690,
+                    "increment": {
+                        "handle": 698,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 697,
+                        "value": "16383"
+                    },
+                    "minvalue": {
+                        "handle": 696,
+                        "value": "0"
+                    },
+                    "setinrun": {
+                        "handle": 694,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 699,
+                        "value": "LSB"
+                    },
+                    "value": "0"
+                },
+                "ch_trg_global_gen": {
+                    "accessmode": {
+                        "handle": 712,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 717,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 718,
+                            "value": "TRUE"
+                        },
+                        "handle": 716,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 713,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 711,
+                        "value": "Global TRG gen."
+                    },
+                    "handle": 710,
+                    "multiplevalue": {
+                        "handle": 715,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 714,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "handle": 662
+            }
+        },
+        "4": {
+            "handle": 768,
+            "par": {
+                "ch_adc_temperature": {
+                    "accessmode": {
+                        "handle": 871,
+                        "value": "READ_ONLY"
+                    },
+                    "datatype": {
+                        "handle": 872,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 873,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 870,
+                        "value": "ADC temperature"
+                    },
+                    "expuom": {
+                        "handle": 878,
+                        "value": "0"
+                    },
+                    "handle": 869,
+                    "increment": {
+                        "handle": 876,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 875,
+                        "value": "255"
+                    },
+                    "minvalue": {
+                        "handle": 874,
+                        "value": "0"
+                    },
+                    "uom": {
+                        "handle": 877,
+                        "value": "deg C"
+                    },
+                    "value": "42"
+                },
+                "ch_couple_trg_mode": {
+                    "accessmode": {
+                        "handle": 838,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 843,
+                            "value": "COUPLE_TRG_MODE_AND"
+                        },
+                        "1": {
+                            "handle": 844,
+                            "value": "COUPLE_TRG_MODE_EVEN_ONLY"
+                        },
+                        "2": {
+                            "handle": 845,
+                            "value": "COUPLE_TRG_MODE_ODD_ONLY"
+                        },
+                        "3": {
+                            "handle": 846,
+                            "value": "COUPLE_TRG_MODE_OR"
+                        },
+                        "handle": 842,
+                        "value": "4"
+                    },
+                    "datatype": {
+                        "handle": 839,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 837,
+                        "value": "Couple TRG mode"
+                    },
+                    "handle": 836,
+                    "multiplevalue": {
+                        "handle": 841,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 840,
+                        "value": "false"
+                    },
+                    "value": "COUPLE_TRG_MODE_OR"
+                },
+                "ch_dcoffset": {
+                    "accessmode": {
+                        "handle": 772,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 773,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 775,
+                        "value": "20"
+                    },
+                    "description": {
+                        "handle": 771,
+                        "value": "DC offset"
+                    },
+                    "expuom": {
+                        "handle": 780,
+                        "value": "0"
+                    },
+                    "handle": 769,
+                    "increment": {
+                        "handle": 778,
+                        "value": "0.1"
+                    },
+                    "maxvalue": {
+                        "handle": 777,
+                        "value": "100.0"
+                    },
+                    "minvalue": {
+                        "handle": 776,
+                        "value": "0.0"
+                    },
+                    "setinrun": {
+                        "handle": 774,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 779,
+                        "value": "%"
+                    },
+                    "value": "20.0"
+                },
+                "ch_enabled": {
+                    "accessmode": {
+                        "handle": 811,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 816,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 817,
+                            "value": "TRUE"
+                        },
+                        "handle": 815,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 812,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 810,
+                        "value": "Ch. enable"
+                    },
+                    "handle": 809,
+                    "multiplevalue": {
+                        "handle": 814,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 813,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "ch_indyn": {
+                    "accessmode": {
+                        "handle": 791,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 796,
+                            "value": "INDYN_2_0_VPP"
+                        },
+                        "1": {
+                            "handle": 797,
+                            "value": "INDYN_0_5_VPP"
+                        },
+                        "handle": 795,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 792,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 790,
+                        "value": "Input Dynamics"
+                    },
+                    "handle": 789,
+                    "multiplevalue": {
+                        "handle": 794,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 793,
+                        "value": "true"
+                    },
+                    "value": "INDYN_2_0_VPP"
+                },
+                "ch_out_propagate": {
+                    "accessmode": {
+                        "handle": 829,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 834,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 835,
+                            "value": "TRUE"
+                        },
+                        "handle": 833,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 830,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 828,
+                        "value": "OUT propagation"
+                    },
+                    "handle": 827,
+                    "multiplevalue": {
+                        "handle": 832,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 831,
+                        "value": "true"
+                    },
+                    "value": "FALSE"
+                },
+                "ch_threshold": {
+                    "accessmode": {
+                        "handle": 800,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 801,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 803,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 799,
+                        "value": "Threshold"
+                    },
+                    "expuom": {
+                        "handle": 808,
+                        "value": "0"
+                    },
+                    "handle": 798,
+                    "increment": {
+                        "handle": 806,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 805,
+                        "value": "16383"
+                    },
+                    "minvalue": {
+                        "handle": 804,
+                        "value": "0"
+                    },
+                    "setinrun": {
+                        "handle": 802,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 807,
+                        "value": "LSB"
+                    },
+                    "value": "0"
+                },
+                "ch_trg_global_gen": {
+                    "accessmode": {
+                        "handle": 820,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 825,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 826,
+                            "value": "TRUE"
+                        },
+                        "handle": 824,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 821,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 819,
+                        "value": "Global TRG gen."
+                    },
+                    "handle": 818,
+                    "multiplevalue": {
+                        "handle": 823,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 822,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "handle": 770
+            }
+        },
+        "5": {
+            "handle": 887,
+            "par": {
+                "ch_adc_temperature": {
+                    "accessmode": {
+                        "handle": 979,
+                        "value": "READ_ONLY"
+                    },
+                    "datatype": {
+                        "handle": 980,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 981,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 978,
+                        "value": "ADC temperature"
+                    },
+                    "expuom": {
+                        "handle": 986,
+                        "value": "0"
+                    },
+                    "handle": 977,
+                    "increment": {
+                        "handle": 984,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 983,
+                        "value": "255"
+                    },
+                    "minvalue": {
+                        "handle": 982,
+                        "value": "0"
+                    },
+                    "uom": {
+                        "handle": 985,
+                        "value": "deg C"
+                    },
+                    "value": "42"
+                },
+                "ch_dcoffset": {
+                    "accessmode": {
+                        "handle": 891,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 892,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 894,
+                        "value": "20"
+                    },
+                    "description": {
+                        "handle": 890,
+                        "value": "DC offset"
+                    },
+                    "expuom": {
+                        "handle": 899,
+                        "value": "0"
+                    },
+                    "handle": 888,
+                    "increment": {
+                        "handle": 897,
+                        "value": "0.1"
+                    },
+                    "maxvalue": {
+                        "handle": 896,
+                        "value": "100.0"
+                    },
+                    "minvalue": {
+                        "handle": 895,
+                        "value": "0.0"
+                    },
+                    "setinrun": {
+                        "handle": 893,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 898,
+                        "value": "%"
+                    },
+                    "value": "20.0"
+                },
+                "ch_enabled": {
+                    "accessmode": {
+                        "handle": 930,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 935,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 936,
+                            "value": "TRUE"
+                        },
+                        "handle": 934,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 931,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 929,
+                        "value": "Ch. enable"
+                    },
+                    "handle": 928,
+                    "multiplevalue": {
+                        "handle": 933,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 932,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "ch_indyn": {
+                    "accessmode": {
+                        "handle": 910,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 915,
+                            "value": "INDYN_2_0_VPP"
+                        },
+                        "1": {
+                            "handle": 916,
+                            "value": "INDYN_0_5_VPP"
+                        },
+                        "handle": 914,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 911,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 909,
+                        "value": "Input Dynamics"
+                    },
+                    "handle": 908,
+                    "multiplevalue": {
+                        "handle": 913,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 912,
+                        "value": "true"
+                    },
+                    "value": "INDYN_2_0_VPP"
+                },
+                "ch_out_propagate": {
+                    "accessmode": {
+                        "handle": 948,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 953,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 954,
+                            "value": "TRUE"
+                        },
+                        "handle": 952,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 949,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 947,
+                        "value": "OUT propagation"
+                    },
+                    "handle": 946,
+                    "multiplevalue": {
+                        "handle": 951,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 950,
+                        "value": "true"
+                    },
+                    "value": "FALSE"
+                },
+                "ch_threshold": {
+                    "accessmode": {
+                        "handle": 919,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 920,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 922,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 918,
+                        "value": "Threshold"
+                    },
+                    "expuom": {
+                        "handle": 927,
+                        "value": "0"
+                    },
+                    "handle": 917,
+                    "increment": {
+                        "handle": 925,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 924,
+                        "value": "16383"
+                    },
+                    "minvalue": {
+                        "handle": 923,
+                        "value": "0"
+                    },
+                    "setinrun": {
+                        "handle": 921,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 926,
+                        "value": "LSB"
+                    },
+                    "value": "0"
+                },
+                "ch_trg_global_gen": {
+                    "accessmode": {
+                        "handle": 939,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 944,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 945,
+                            "value": "TRUE"
+                        },
+                        "handle": 943,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 940,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 938,
+                        "value": "Global TRG gen."
+                    },
+                    "handle": 937,
+                    "multiplevalue": {
+                        "handle": 942,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 941,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "handle": 889
+            }
+        },
+        "6": {
+            "handle": 995,
+            "par": {
+                "ch_adc_temperature": {
+                    "accessmode": {
+                        "handle": 1098,
+                        "value": "READ_ONLY"
+                    },
+                    "datatype": {
+                        "handle": 1099,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 1100,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 1097,
+                        "value": "ADC temperature"
+                    },
+                    "expuom": {
+                        "handle": 1105,
+                        "value": "0"
+                    },
+                    "handle": 1096,
+                    "increment": {
+                        "handle": 1103,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 1102,
+                        "value": "255"
+                    },
+                    "minvalue": {
+                        "handle": 1101,
+                        "value": "0"
+                    },
+                    "uom": {
+                        "handle": 1104,
+                        "value": "deg C"
+                    },
+                    "value": "42"
+                },
+                "ch_couple_trg_mode": {
+                    "accessmode": {
+                        "handle": 1065,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 1070,
+                            "value": "COUPLE_TRG_MODE_AND"
+                        },
+                        "1": {
+                            "handle": 1071,
+                            "value": "COUPLE_TRG_MODE_EVEN_ONLY"
+                        },
+                        "2": {
+                            "handle": 1072,
+                            "value": "COUPLE_TRG_MODE_ODD_ONLY"
+                        },
+                        "3": {
+                            "handle": 1073,
+                            "value": "COUPLE_TRG_MODE_OR"
+                        },
+                        "handle": 1069,
+                        "value": "4"
+                    },
+                    "datatype": {
+                        "handle": 1066,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 1064,
+                        "value": "Couple TRG mode"
+                    },
+                    "handle": 1063,
+                    "multiplevalue": {
+                        "handle": 1068,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 1067,
+                        "value": "false"
+                    },
+                    "value": "COUPLE_TRG_MODE_OR"
+                },
+                "ch_dcoffset": {
+                    "accessmode": {
+                        "handle": 999,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 1000,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 1002,
+                        "value": "20"
+                    },
+                    "description": {
+                        "handle": 998,
+                        "value": "DC offset"
+                    },
+                    "expuom": {
+                        "handle": 1007,
+                        "value": "0"
+                    },
+                    "handle": 996,
+                    "increment": {
+                        "handle": 1005,
+                        "value": "0.1"
+                    },
+                    "maxvalue": {
+                        "handle": 1004,
+                        "value": "100.0"
+                    },
+                    "minvalue": {
+                        "handle": 1003,
+                        "value": "0.0"
+                    },
+                    "setinrun": {
+                        "handle": 1001,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 1006,
+                        "value": "%"
+                    },
+                    "value": "20.0"
+                },
+                "ch_enabled": {
+                    "accessmode": {
+                        "handle": 1038,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 1043,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 1044,
+                            "value": "TRUE"
+                        },
+                        "handle": 1042,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 1039,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 1037,
+                        "value": "Ch. enable"
+                    },
+                    "handle": 1036,
+                    "multiplevalue": {
+                        "handle": 1041,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 1040,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "ch_indyn": {
+                    "accessmode": {
+                        "handle": 1018,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 1023,
+                            "value": "INDYN_2_0_VPP"
+                        },
+                        "1": {
+                            "handle": 1024,
+                            "value": "INDYN_0_5_VPP"
+                        },
+                        "handle": 1022,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 1019,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 1017,
+                        "value": "Input Dynamics"
+                    },
+                    "handle": 1016,
+                    "multiplevalue": {
+                        "handle": 1021,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 1020,
+                        "value": "true"
+                    },
+                    "value": "INDYN_2_0_VPP"
+                },
+                "ch_out_propagate": {
+                    "accessmode": {
+                        "handle": 1056,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 1061,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 1062,
+                            "value": "TRUE"
+                        },
+                        "handle": 1060,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 1057,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 1055,
+                        "value": "OUT propagation"
+                    },
+                    "handle": 1054,
+                    "multiplevalue": {
+                        "handle": 1059,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 1058,
+                        "value": "true"
+                    },
+                    "value": "FALSE"
+                },
+                "ch_threshold": {
+                    "accessmode": {
+                        "handle": 1027,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 1028,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 1030,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 1026,
+                        "value": "Threshold"
+                    },
+                    "expuom": {
+                        "handle": 1035,
+                        "value": "0"
+                    },
+                    "handle": 1025,
+                    "increment": {
+                        "handle": 1033,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 1032,
+                        "value": "16383"
+                    },
+                    "minvalue": {
+                        "handle": 1031,
+                        "value": "0"
+                    },
+                    "setinrun": {
+                        "handle": 1029,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 1034,
+                        "value": "LSB"
+                    },
+                    "value": "0"
+                },
+                "ch_trg_global_gen": {
+                    "accessmode": {
+                        "handle": 1047,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 1052,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 1053,
+                            "value": "TRUE"
+                        },
+                        "handle": 1051,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 1048,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 1046,
+                        "value": "Global TRG gen."
+                    },
+                    "handle": 1045,
+                    "multiplevalue": {
+                        "handle": 1050,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 1049,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "handle": 997
+            }
+        },
+        "7": {
+            "handle": 1114,
+            "par": {
+                "ch_adc_temperature": {
+                    "accessmode": {
+                        "handle": 1206,
+                        "value": "READ_ONLY"
+                    },
+                    "datatype": {
+                        "handle": 1207,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 1208,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 1205,
+                        "value": "ADC temperature"
+                    },
+                    "expuom": {
+                        "handle": 1213,
+                        "value": "0"
+                    },
+                    "handle": 1204,
+                    "increment": {
+                        "handle": 1211,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 1210,
+                        "value": "255"
+                    },
+                    "minvalue": {
+                        "handle": 1209,
+                        "value": "0"
+                    },
+                    "uom": {
+                        "handle": 1212,
+                        "value": "deg C"
+                    },
+                    "value": "42"
+                },
+                "ch_dcoffset": {
+                    "accessmode": {
+                        "handle": 1118,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 1119,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 1121,
+                        "value": "20"
+                    },
+                    "description": {
+                        "handle": 1117,
+                        "value": "DC offset"
+                    },
+                    "expuom": {
+                        "handle": 1126,
+                        "value": "0"
+                    },
+                    "handle": 1115,
+                    "increment": {
+                        "handle": 1124,
+                        "value": "0.1"
+                    },
+                    "maxvalue": {
+                        "handle": 1123,
+                        "value": "100.0"
+                    },
+                    "minvalue": {
+                        "handle": 1122,
+                        "value": "0.0"
+                    },
+                    "setinrun": {
+                        "handle": 1120,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 1125,
+                        "value": "%"
+                    },
+                    "value": "20.0"
+                },
+                "ch_enabled": {
+                    "accessmode": {
+                        "handle": 1157,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 1162,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 1163,
+                            "value": "TRUE"
+                        },
+                        "handle": 1161,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 1158,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 1156,
+                        "value": "Ch. enable"
+                    },
+                    "handle": 1155,
+                    "multiplevalue": {
+                        "handle": 1160,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 1159,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "ch_indyn": {
+                    "accessmode": {
+                        "handle": 1137,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 1142,
+                            "value": "INDYN_2_0_VPP"
+                        },
+                        "1": {
+                            "handle": 1143,
+                            "value": "INDYN_0_5_VPP"
+                        },
+                        "handle": 1141,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 1138,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 1136,
+                        "value": "Input Dynamics"
+                    },
+                    "handle": 1135,
+                    "multiplevalue": {
+                        "handle": 1140,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 1139,
+                        "value": "true"
+                    },
+                    "value": "INDYN_2_0_VPP"
+                },
+                "ch_out_propagate": {
+                    "accessmode": {
+                        "handle": 1175,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 1180,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 1181,
+                            "value": "TRUE"
+                        },
+                        "handle": 1179,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 1176,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 1174,
+                        "value": "OUT propagation"
+                    },
+                    "handle": 1173,
+                    "multiplevalue": {
+                        "handle": 1178,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 1177,
+                        "value": "true"
+                    },
+                    "value": "FALSE"
+                },
+                "ch_threshold": {
+                    "accessmode": {
+                        "handle": 1146,
+                        "value": "READ_WRITE"
+                    },
+                    "datatype": {
+                        "handle": 1147,
+                        "value": "NUMBER"
+                    },
+                    "defaultvalue": {
+                        "handle": 1149,
+                        "value": "0"
+                    },
+                    "description": {
+                        "handle": 1145,
+                        "value": "Threshold"
+                    },
+                    "expuom": {
+                        "handle": 1154,
+                        "value": "0"
+                    },
+                    "handle": 1144,
+                    "increment": {
+                        "handle": 1152,
+                        "value": "1"
+                    },
+                    "maxvalue": {
+                        "handle": 1151,
+                        "value": "16383"
+                    },
+                    "minvalue": {
+                        "handle": 1150,
+                        "value": "0"
+                    },
+                    "setinrun": {
+                        "handle": 1148,
+                        "value": "true"
+                    },
+                    "uom": {
+                        "handle": 1153,
+                        "value": "LSB"
+                    },
+                    "value": "0"
+                },
+                "ch_trg_global_gen": {
+                    "accessmode": {
+                        "handle": 1166,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 1171,
+                            "value": "FALSE"
+                        },
+                        "1": {
+                            "handle": 1172,
+                            "value": "TRUE"
+                        },
+                        "handle": 1170,
+                        "value": "2"
+                    },
+                    "datatype": {
+                        "handle": 1167,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 1165,
+                        "value": "Global TRG gen."
+                    },
+                    "handle": 1164,
+                    "multiplevalue": {
+                        "handle": 1169,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 1168,
+                        "value": "true"
+                    },
+                    "value": "TRUE"
+                },
+                "handle": 1116
+            }
+        },
+        "handle": 314
+    },
+    "cmd": {
+        "armacquisition": {
+            "description": {
+                "handle": 1235,
+                "value": "Arm the acquisition, in case of SW start the acquisition is also started."
+            },
+            "handle": 1233,
+            "setinrun": {
+                "handle": 1236,
+                "value": "false"
+            }
+        },
+        "calibrateadc": {
+            "description": {
+                "handle": 1250,
+                "value": "Perform the channel calibration of the ADCs. Supported by x725, x730 and x751 digitizers, no-op otherwise."
+            },
+            "handle": 1249,
+            "setinrun": {
+                "handle": 1251,
+                "value": "false"
+            }
+        },
+        "cleardata": {
+            "description": {
+                "handle": 1244,
+                "value": "Clear data from memories. Register content is not affected."
+            },
+            "handle": 1243,
+            "setinrun": {
+                "handle": 1245,
+                "value": "true"
+            }
+        },
+        "disarmacquisition": {
+            "description": {
+                "handle": 1238,
+                "value": "Disarm the acquisition, in case of SW start the acquisition is also stopped."
+            },
+            "handle": 1237,
+            "setinrun": {
+                "handle": 1239,
+                "value": "true"
+            }
+        },
+        "handle": 1234,
+        "reset": {
+            "description": {
+                "handle": 1241,
+                "value": "Reset the board. This command sets all parameters to the default value and clears data from memories."
+            },
+            "handle": 1240,
+            "setinrun": {
+                "handle": 1242,
+                "value": "false"
+            }
+        },
+        "sendswtrigger": {
+            "description": {
+                "handle": 1247,
+                "value": "Send a software trigger to the digitizer."
+            },
+            "handle": 1246,
+            "setinrun": {
+                "handle": 1248,
+                "value": "true"
+            }
+        }
+    },
+    "endpoint": {
+        "handle": 1253,
+        "par": {
+            "activeendpoint": {
+                "accessmode": {
+                    "handle": 1324,
+                    "value": "READ_WRITE"
+                },
+                "allowedvalues": {
+                    "0": {
+                        "handle": 1327,
+                        "value": "raw"
+                    },
+                    "1": {
+                        "handle": 1328,
+                        "value": "scope"
+                    },
+                    "handle": 1326,
+                    "value": "2"
+                },
+                "datatype": {
+                    "handle": 1325,
+                    "value": "STRING"
+                },
+                "defaultvalue": {
+                    "handle": 1323,
+                    "value": "scope"
+                },
+                "description": {
+                    "handle": 1321,
+                    "value": "Active endpoint"
+                },
+                "handle": 1319,
+                "setinrun": {
+                    "handle": 1322,
+                    "value": "false"
+                },
+                "value": "scope"
+            },
+            "handle": 1320
+        },
+        "raw": {
+            "handle": 1252
+        },
+        "scope": {
+            "handle": 1254
+        }
+    },
+    "handle": 0,
+    "par": {
+        "acqrunning": {
+            "accessmode": {
+                "handle": 243,
+                "value": "READ_ONLY"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 247,
+                    "value": "FALSE"
+                },
+                "1": {
+                    "handle": 248,
+                    "value": "TRUE"
+                },
+                "handle": 246,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 244,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 242,
+                "value": "Acquisition running"
+            },
+            "handle": 241,
+            "multiplevalue": {
+                "handle": 245,
+                "value": "false"
+            },
+            "value": "FALSE"
+        },
+        "adc_nbit": {
+            "accessmode": {
+                "handle": 1293,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1294,
+                "value": "NUMBER"
+            },
+            "description": {
+                "handle": 1292,
+                "value": "Number of bits of the ADCs"
+            },
+            "handle": 1291,
+            "value": "14"
+        },
+        "adc_samplrate": {
+            "accessmode": {
+                "handle": 1313,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1314,
+                "value": "NUMBER"
+            },
+            "description": {
+                "handle": 1312,
+                "value": "Sampling rate of the ADCs"
+            },
+            "handle": 1311,
+            "value": "500.000"
+        },
+        "amc_fwver": {
+            "accessmode": {
+                "handle": 1257,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1258,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 1256,
+                "value": "AMC firmware version"
+            },
+            "handle": 1255,
+            "value": "00.08 - Build 4426"
+        },
+        "chovertemp": {
+            "accessmode": {
+                "handle": 267,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 268,
+                "value": "NUMBER"
+            },
+            "defaultvalue": {
+                "handle": 269,
+                "value": "0"
+            },
+            "description": {
+                "handle": 266,
+                "value": "Overtemp mask"
+            },
+            "expuom": {
+                "handle": 274,
+                "value": "0"
+            },
+            "handle": 265,
+            "increment": {
+                "handle": 272,
+                "value": "1"
+            },
+            "maxvalue": {
+                "handle": 271,
+                "value": "3"
+            },
+            "minvalue": {
+                "handle": 270,
+                "value": "0"
+            },
+            "uom": {
+                "handle": 273,
+                "value": ""
+            },
+            "value": "0"
+        },
+        "chshutdown": {
+            "accessmode": {
+                "handle": 259,
+                "value": "READ_ONLY"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 263,
+                    "value": "FALSE"
+                },
+                "1": {
+                    "handle": 264,
+                    "value": "TRUE"
+                },
+                "handle": 262,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 260,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 258,
+                "value": "Shutdown status"
+            },
+            "handle": 257,
+            "multiplevalue": {
+                "handle": 261,
+                "value": "false"
+            },
+            "value": "FALSE"
+        },
+        "dt_ext_clock": {
+            "accessmode": {
+                "handle": 157,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 162,
+                    "value": "FALSE"
+                },
+                "1": {
+                    "handle": 163,
+                    "value": "TRUE"
+                },
+                "handle": 161,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 158,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 156,
+                "value": "DT External clock source"
+            },
+            "handle": 155,
+            "multiplevalue": {
+                "handle": 160,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 159,
+                "value": "true"
+            },
+            "value": "FALSE"
+        },
+        "energy_nbit": {
+            "accessmode": {
+                "handle": 1301,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1302,
+                "value": "NUMBER"
+            },
+            "description": {
+                "handle": 1300,
+                "value": "Number of bits of the energy"
+            },
+            "handle": 1299,
+            "value": "0"
+        },
+        "extras_opt": {
+            "accessmode": {
+                "handle": 277,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 282,
+                    "value": "EXTRAS_OPT_TRG_SOURCE"
+                },
+                "1": {
+                    "handle": 283,
+                    "value": "EXTRAS_OPT_TT48"
+                },
+                "handle": 281,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 278,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 276,
+                "value": "Standard FW extras option"
+            },
+            "handle": 275,
+            "multiplevalue": {
+                "handle": 280,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 279,
+                "value": "false"
+            },
+            "value": "EXTRAS_OPT_TRG_SOURCE"
+        },
+        "familycode": {
+            "accessmode": {
+                "handle": 1277,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1278,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 1276,
+                "value": "Family code (see CAEN_DGTZ_BoardFamilyCode_t)"
+            },
+            "handle": 1275,
+            "value": "XX730"
+        },
+        "formfactor": {
+            "accessmode": {
+                "handle": 1281,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1282,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 1280,
+                "value": "Form factor (see CAEN_DGTZ_BoardFormFactor_t)"
+            },
+            "handle": 1279,
+            "value": "DESKTOP"
+        },
+        "fwtype": {
+            "accessmode": {
+                "handle": 1265,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1266,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 1264,
+                "value": "Firmware type"
+            },
+            "handle": 1263,
+            "value": "SCOPE"
+        },
+        "handle": 2,
+        "iolevel": {
+            "accessmode": {
+                "handle": 37,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 42,
+                    "value": "FPIOTYPE_NIM"
+                },
+                "1": {
+                    "handle": 43,
+                    "value": "FPIOTYPE_TTL"
+                },
+                "handle": 41,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 38,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 36,
+                "value": "I/O Level"
+            },
+            "handle": 35,
+            "multiplevalue": {
+                "handle": 40,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 39,
+                "value": "true"
+            },
+            "value": "FPIOTYPE_NIM"
+        },
+        "licensestatus": {
+            "accessmode": {
+                "handle": 1285,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1286,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 1284,
+                "value": "License status"
+            },
+            "handle": 1283,
+            "value": "INVALID LICENSE"
+        },
+        "maxrawdatasize": {
+            "accessmode": {
+                "handle": 1317,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1318,
+                "value": "NUMBER"
+            },
+            "description": {
+                "handle": 1316,
+                "value": "Maximum size that can be returned from a single call to ReadData from the raw endpoint."
+            },
+            "handle": 1315,
+            "value": "14672"
+        },
+        "modelname": {
+            "accessmode": {
+                "handle": 1273,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1274,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 1272,
+                "value": "CAEN model name"
+            },
+            "handle": 1271,
+            "value": "DT5730B"
+        },
+        "numanalogtraces": {
+            "accessmode": {
+                "handle": 1305,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1306,
+                "value": "NUMBER"
+            },
+            "description": {
+                "handle": 1304,
+                "value": "Number of supported analog traces"
+            },
+            "handle": 1303,
+            "value": "1"
+        },
+        "numch": {
+            "accessmode": {
+                "handle": 1297,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1298,
+                "value": "NUMBER"
+            },
+            "description": {
+                "handle": 1296,
+                "value": "Number of channels"
+            },
+            "handle": 1295,
+            "value": "8"
+        },
+        "numdigitaltraces": {
+            "accessmode": {
+                "handle": 1309,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1310,
+                "value": "NUMBER"
+            },
+            "description": {
+                "handle": 1308,
+                "value": "Number of supported digital traces"
+            },
+            "handle": 1307,
+            "value": "0"
+        },
+        "out_selection": {
+            "accessmode": {
+                "handle": 74,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 79,
+                    "value": "OUT_PROPAGATION_LEVEL0"
+                },
+                "1": {
+                    "handle": 80,
+                    "value": "OUT_PROPAGATION_LEVEL1"
+                },
+                "10": {
+                    "handle": 89,
+                    "value": "OUT_PROPAGATION_SYNCIN"
+                },
+                "2": {
+                    "handle": 81,
+                    "value": "OUT_PROPAGATION_TRIGGER"
+                },
+                "3": {
+                    "handle": 82,
+                    "value": "OUT_PROPAGATION_RUN"
+                },
+                "4": {
+                    "handle": 83,
+                    "value": "OUT_PROPAGATION_DELAYED_RUN"
+                },
+                "5": {
+                    "handle": 84,
+                    "value": "OUT_PROPAGATION_SAMPLE_CLK"
+                },
+                "6": {
+                    "handle": 85,
+                    "value": "OUT_PROPAGATION_PLL_CLK"
+                },
+                "7": {
+                    "handle": 86,
+                    "value": "OUT_PROPAGATION_BUSY"
+                },
+                "8": {
+                    "handle": 87,
+                    "value": "OUT_PROPAGATION_PLL_UNLOCK"
+                },
+                "9": {
+                    "handle": 88,
+                    "value": "OUT_PROPAGATION_VPROBE"
+                },
+                "handle": 78,
+                "value": "11"
+            },
+            "datatype": {
+                "handle": 75,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 73,
+                "value": "Out Selection"
+            },
+            "handle": 72,
+            "multiplevalue": {
+                "handle": 77,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 76,
+                "value": "false"
+            },
+            "value": "OUT_PROPAGATION_TRIGGER"
+        },
+        "pcbrev": {
+            "accessmode": {
+                "handle": 1289,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1290,
+                "value": "NUMBER"
+            },
+            "description": {
+                "handle": 1288,
+                "value": "PCB revision"
+            },
+            "handle": 1287,
+            "value": "4"
+        },
+        "plllocked": {
+            "accessmode": {
+                "handle": 251,
+                "value": "READ_ONLY"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 255,
+                    "value": "FALSE"
+                },
+                "1": {
+                    "handle": 256,
+                    "value": "TRUE"
+                },
+                "handle": 254,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 252,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 250,
+                "value": "PLL locked"
+            },
+            "handle": 249,
+            "multiplevalue": {
+                "handle": 253,
+                "value": "false"
+            },
+            "value": "TRUE"
+        },
+        "posttrg": {
+            "accessmode": {
+                "handle": 295,
+                "value": "READ_WRITE"
+            },
+            "datatype": {
+                "handle": 296,
+                "value": "NUMBER"
+            },
+            "defaultvalue": {
+                "handle": 298,
+                "value": "256"
+            },
+            "description": {
+                "handle": 294,
+                "value": "Post TRG"
+            },
+            "expuom": {
+                "handle": 303,
+                "value": "-9"
+            },
+            "handle": 293,
+            "increment": {
+                "handle": 301,
+                "value": "8"
+            },
+            "maxvalue": {
+                "handle": 300,
+                "value": "16777200"
+            },
+            "minvalue": {
+                "handle": 299,
+                "value": "0"
+            },
+            "setinrun": {
+                "handle": 297,
+                "value": "true"
+            },
+            "uom": {
+                "handle": 302,
+                "value": "s"
+            },
+            "value": "256"
+        },
+        "reclen": {
+            "accessmode": {
+                "handle": 15,
+                "value": "READ_WRITE"
+            },
+            "datatype": {
+                "handle": 16,
+                "value": "NUMBER"
+            },
+            "defaultvalue": {
+                "handle": 18,
+                "value": "320"
+            },
+            "description": {
+                "handle": 14,
+                "value": "Record Length"
+            },
+            "expuom": {
+                "handle": 23,
+                "value": "-9"
+            },
+            "handle": 13,
+            "increment": {
+                "handle": 21,
+                "value": "20"
+            },
+            "maxvalue": {
+                "handle": 20,
+                "value": "10485740"
+            },
+            "minvalue": {
+                "handle": 19,
+                "value": "20"
+            },
+            "setinrun": {
+                "handle": 17,
+                "value": "false"
+            },
+            "uom": {
+                "handle": 22,
+                "value": "s"
+            },
+            "value": "320"
+        },
+        "roc_fwver": {
+            "accessmode": {
+                "handle": 1261,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1262,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 1260,
+                "value": "ROC firmware version"
+            },
+            "handle": 1259,
+            "value": "04.23 - Build 4B06"
+        },
+        "self_trigger_edge": {
+            "accessmode": {
+                "handle": 286,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 291,
+                    "value": "RISE"
+                },
+                "1": {
+                    "handle": 292,
+                    "value": "FALL"
+                },
+                "handle": 290,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 287,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 285,
+                "value": "Self trigger edge"
+            },
+            "handle": 284,
+            "multiplevalue": {
+                "handle": 289,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 288,
+                "value": "true"
+            },
+            "value": "RISE"
+        },
+        "serialnum": {
+            "accessmode": {
+                "handle": 1269,
+                "value": "READ_ONLY"
+            },
+            "datatype": {
+                "handle": 1270,
+                "value": "NUMBER"
+            },
+            "description": {
+                "handle": 1268,
+                "value": "Serial number"
+            },
+            "handle": 1267,
+            "value": "990"
+        },
+        "start_delay": {
+            "accessmode": {
+                "handle": 146,
+                "value": "READ_WRITE"
+            },
+            "datatype": {
+                "handle": 147,
+                "value": "NUMBER"
+            },
+            "defaultvalue": {
+                "handle": 149,
+                "value": "0"
+            },
+            "description": {
+                "handle": 145,
+                "value": "Sync. start delay"
+            },
+            "expuom": {
+                "handle": 154,
+                "value": "-9"
+            },
+            "handle": 144,
+            "increment": {
+                "handle": 152,
+                "value": "16"
+            },
+            "maxvalue": {
+                "handle": 151,
+                "value": "4080"
+            },
+            "minvalue": {
+                "handle": 150,
+                "value": "0"
+            },
+            "setinrun": {
+                "handle": 148,
+                "value": "true"
+            },
+            "uom": {
+                "handle": 153,
+                "value": "s"
+            },
+            "value": "0"
+        },
+        "startmode": {
+            "accessmode": {
+                "handle": 64,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 69,
+                    "value": "START_MODE_SW"
+                },
+                "1": {
+                    "handle": 70,
+                    "value": "START_MODE_S_IN"
+                },
+                "2": {
+                    "handle": 71,
+                    "value": "START_MODE_FIRST_TRG"
+                },
+                "handle": 68,
+                "value": "3"
+            },
+            "datatype": {
+                "handle": 65,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 63,
+                "value": "Start mode"
+            },
+            "handle": 62,
+            "multiplevalue": {
+                "handle": 67,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 66,
+                "value": "false"
+            },
+            "value": "START_MODE_SW"
+        },
+        "trg_count_all": {
+            "accessmode": {
+                "handle": 306,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 311,
+                    "value": "FALSE"
+                },
+                "1": {
+                    "handle": 312,
+                    "value": "TRUE"
+                },
+                "handle": 310,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 307,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 305,
+                "value": "Count all triggers"
+            },
+            "handle": 304,
+            "multiplevalue": {
+                "handle": 309,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 308,
+                "value": "false"
+            },
+            "value": "TRUE"
+        },
+        "trg_ext_enable": {
+            "accessmode": {
+                "handle": 101,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 106,
+                    "value": "FALSE"
+                },
+                "1": {
+                    "handle": 107,
+                    "value": "TRUE"
+                },
+                "handle": 105,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 102,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 100,
+                "value": "Ext. TRG enable"
+            },
+            "handle": 99,
+            "multiplevalue": {
+                "handle": 104,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 103,
+                "value": "true"
+            },
+            "value": "FALSE"
+        },
+        "trg_ext_out_propagate": {
+            "accessmode": {
+                "handle": 119,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 124,
+                    "value": "FALSE"
+                },
+                "1": {
+                    "handle": 125,
+                    "value": "TRUE"
+                },
+                "handle": 123,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 120,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 118,
+                "value": "Ext. TRG propagate"
+            },
+            "handle": 117,
+            "multiplevalue": {
+                "handle": 122,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 121,
+                "value": "true"
+            },
+            "value": "FALSE"
+        },
+        "trg_sw_enable": {
+            "accessmode": {
+                "handle": 92,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 97,
+                    "value": "FALSE"
+                },
+                "1": {
+                    "handle": 98,
+                    "value": "TRUE"
+                },
+                "handle": 96,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 93,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 91,
+                "value": "SW TRG enable"
+            },
+            "handle": 90,
+            "multiplevalue": {
+                "handle": 95,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 94,
+                "value": "true"
+            },
+            "value": "TRUE"
+        },
+        "trg_sw_out_propagate": {
+            "accessmode": {
+                "handle": 110,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 115,
+                    "value": "FALSE"
+                },
+                "1": {
+                    "handle": 116,
+                    "value": "TRUE"
+                },
+                "handle": 114,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 111,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 109,
+                "value": "SW TRG propagate"
+            },
+            "handle": 108,
+            "multiplevalue": {
+                "handle": 113,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 112,
+                "value": "true"
+            },
+            "value": "FALSE"
+        },
+        "trgin_level_sync": {
+            "accessmode": {
+                "handle": 128,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 133,
+                    "value": "FALSE"
+                },
+                "1": {
+                    "handle": 134,
+                    "value": "TRUE"
+                },
+                "handle": 132,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 129,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 127,
+                "value": "TRG IN level sync."
+            },
+            "handle": 126,
+            "multiplevalue": {
+                "handle": 131,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 130,
+                "value": "true"
+            },
+            "value": "FALSE"
+        },
+        "trgin_to_mezzanines": {
+            "accessmode": {
+                "handle": 137,
+                "value": "READ_WRITE"
+            },
+            "allowedvalues": {
+                "0": {
+                    "handle": 142,
+                    "value": "FALSE"
+                },
+                "1": {
+                    "handle": 143,
+                    "value": "TRUE"
+                },
+                "handle": 141,
+                "value": "2"
+            },
+            "datatype": {
+                "handle": 138,
+                "value": "STRING"
+            },
+            "description": {
+                "handle": 136,
+                "value": "TRG IN to mezzanines"
+            },
+            "handle": 135,
+            "multiplevalue": {
+                "handle": 140,
+                "value": "false"
+            },
+            "setinrun": {
+                "handle": 139,
+                "value": "true"
+            },
+            "value": "FALSE"
+        }
+    },
+    "vtrace": {
+        "0": {
+            "handle": 1222,
+            "par": {
+                "handle": 1225,
+                "vtrace_probe": {
+                    "accessmode": {
+                        "handle": 1227,
+                        "value": "READ_WRITE"
+                    },
+                    "allowedvalues": {
+                        "0": {
+                            "handle": 1232,
+                            "value": "VPROBE_INPUT"
+                        },
+                        "handle": 1231,
+                        "value": "1"
+                    },
+                    "datatype": {
+                        "handle": 1228,
+                        "value": "STRING"
+                    },
+                    "description": {
+                        "handle": 1226,
+                        "value": "Virtual Probe"
+                    },
+                    "handle": 1224,
+                    "multiplevalue": {
+                        "handle": 1230,
+                        "value": "false"
+                    },
+                    "setinrun": {
+                        "handle": 1229,
+                        "value": "true"
+                    },
+                    "value": "VPROBE_INPUT"
+                }
+            }
+        },
+        "handle": 1223
+    }
+}
