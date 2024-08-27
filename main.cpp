@@ -1,13 +1,17 @@
+#include <TROOT.h>
+#include <TSystem.h>
 #include <fcntl.h>
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <termios.h>
-#include <unistd.h>
 
+#include <chrono>
 #include <iostream>
 #include <memory>
 
+#include "TDataMonitor.hpp"
+#include "TDataTaking.hpp"
 #include "TDigitizer.hpp"
 
 enum class AppState { Quit, Reload, Continue };
@@ -41,41 +45,70 @@ AppState InputCheck()
 
 int main(int argc, char *argv[])
 {
-  auto digitizer = std::make_unique<TDigitizer>();
-  auto fileName =
-      "/home/aogaki/DAQ/DigiCon/build/Parameters_SN990_FWSCOPE.json";
-  digitizer->LoadParameters(fileName);
-  digitizer->OpenDigitizer();
+  ROOT::EnableThreadSafety();
 
-  std::cout << "Configure" << std::endl;
-  digitizer->ConfigDigitizer();
-  digitizer->SetDataFormat();
+  bool forceTrace = false;
 
-  std::cout << "Start" << std::endl;
-  digitizer->StartAcquisition();
+  std::string configList = "configList";
+  if (argc > 1) {
+    for (auto i = 1; i < argc - 1; i++) {
+      if (std::string(argv[i]) == "-w") {
+        forceTrace = true;
+      }
+    }
 
+    configList = argv[argc - 1];
+  }
+
+  auto daq = std::make_unique<TDataTaking>();
+  daq->LoadConfigFileList(configList);
+  daq->OpenDigitizers();
+
+  if (forceTrace) {
+    std::cout << "Trace ON" << std::endl;
+    daq->ForceTrace();
+  }
+  daq->ConfigDigitizers();
+
+  auto monitor = std::make_unique<TDataMonitor>();
+  monitor->LoadChannelConf(daq->GetNumberOfCh());
+  monitor->SetDeltaT(daq->GetDeltaT());
+  monitor->StartMonitor();
+
+  daq->StartAcquisition();
+
+  auto counter = 0UL;
+  auto startTime = std::chrono::high_resolution_clock::now();
   while (true) {
-    auto data = digitizer->GetEvents();
-    if (data->size() > 0)
-      std::cout << "Data size: " << data->size() << " "
-                << data->at(0)->timeStampNs << " " << int(data->at(0)->module)
-                << std::endl;
-
-    usleep(10000);
+    auto data = daq->GetData();
+    if (data->size() > 0) {
+      counter += data->size();
+      monitor->SetData(std::move(data));
+    }
 
     auto state = InputCheck();
     if (state == AppState::Quit) {
       break;
     } else if (state == AppState::Reload) {
-      // ;
+      std::cout << "Reloading configuration files" << std::endl;
+      monitor->StopMonitor();
+      monitor->ClearHist();
+      daq->StopAcquisition();
+      daq->ConfigDigitizers();
+      monitor->StartMonitor();
+      daq->StartAcquisition();
     }
   }
+  auto endTime = std::chrono::high_resolution_clock::now();
+  auto duration =
+      std::chrono::duration_cast<std::chrono::seconds>(endTime - startTime);
+  std::cout << "Total time: " << duration.count() << " s" << std::endl;
+  std::cout << "Event rate: " << counter / duration.count() << " Hz"
+            << std::endl;
 
-  std::cout << "Stop" << std::endl;
-  digitizer->StopAcquisition();
-
-  std::cout << "Close" << std::endl;
-  digitizer->CloseDigitizer();
+  monitor->StopMonitor();
+  daq->StopAcquisition();
+  daq->CloseDigitizers();
 
   return 0;
 }

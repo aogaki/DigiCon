@@ -1,4 +1,6 @@
 // Data class, no getter and setter, only public members
+#ifndef TEventData_HPP
+#define TEventData_HPP 1
 
 #include <cstdint>
 #include <vector>
@@ -54,3 +56,27 @@ class TEventData
   std::size_t waveformSize;
   uint32_t eventSize;
 };
+typedef std::unique_ptr<std::vector<std::unique_ptr<TEventData>>> DAQData_t;
+
+class TSmallEventData
+{
+ public:
+  TSmallEventData() {};
+  TSmallEventData(const TSmallEventData &eventData)
+  {
+    module = eventData.module;
+    channel = eventData.channel;
+    timeStampNs = eventData.timeStampNs;
+    energy = eventData.energy;
+    energyShort = eventData.energyShort;
+  };
+  ~TSmallEventData() {};
+
+  uint8_t module;
+  uint8_t channel;
+  double timeStampNs;
+  uint16_t energy;
+  int16_t energyShort;
+};
+
+#endif  // TEventData_HPP

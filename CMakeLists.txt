@@ -18,7 +18,7 @@ set(CMAKE_CXX_FLAGS_DEBUG_INIT "-Wall")
 set(CMAKE_CXX_FLAGS_RELEASE_INIT "-Wall")
 
 # Huuuuuge warning options!
-add_compile_options(-O2 -pthread -Wall -Wextra -Wpedantic -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2)
+add_compile_options(-O2 -pthread -Wall -Wextra -Wpedantic -Wshadow)
 
 # ----------------------------------------------------------------------------
 # Locate sources and headers for this project

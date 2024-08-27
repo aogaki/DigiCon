@@ -3,7 +3,6 @@
 
 #include <CAEN_FELib.h>
 
-#include <TEventData.hpp>
 #include <memory>
 #include <mutex>
 #include <nlohmann/json.hpp>
@@ -11,13 +10,13 @@
 #include <thread>
 #include <vector>
 
+#include "TEventData.hpp"
+
 class TDigitizer
 {
  public:
   TDigitizer();
   virtual ~TDigitizer();
-
-  void TestScope();
 
   void LoadParameters(const std::string &filename);
   void OpenDigitizer();
@@ -25,11 +24,17 @@ class TDigitizer
   void ConfigDigitizer();
 
   void StartAcquisition();
+  void SendStartSignal();
   void StopAcquisition();
 
   void SetDataFormat();
 
-  std::unique_ptr<std::vector<std::unique_ptr<TEventData>>> GetEvents();
+  DAQData_t GetEvents();
+
+  uint32_t GetNumberOfCh();
+  uint32_t GetDeltaT();
+
+  void ForceTrace();
 
  private:
   uint8_t fModNo = 0;
@@ -39,12 +44,13 @@ class TDigitizer
   std::string fFW;
   int32_t fTimeOut = 100;
 
-  std::unique_ptr<std::vector<std::unique_ptr<TEventData>>> fEventsVec;
+  DAQData_t fEventsVec;
   void MakeNewEventsVec();
   std::mutex fEventsDataMutex;
   std::thread fAcquisitionThread;
   bool fRunning = false;
 
+  uint32_t fEventThreshold = 1023;
   void FetchEventsPSD();
   void FetchEventsPHA();
   void FetchEventsScope();
