@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
     auto data = daq->GetData();
     if (data->size() > 0) {
       counter += data->size();
-      monitor->SetData(std::move(data));
+      monitor->SetData(data);
     }
 
     auto state = InputCheck();

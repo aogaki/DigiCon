@@ -150,11 +150,11 @@ void TDataMonitor::RegisterHistCanvas()
   }
 }
 
-void TDataMonitor::SetData(DAQData_t data)
+void TDataMonitor::SetData(std::shared_ptr<DAQData_t> data)
 {
   {
     std::lock_guard<std::mutex> lock(fDataQueueMutex);
-    fDataQueue.push_back(std::move(data));
+    fDataQueue.push_back(data);
   }
 }
 
@@ -166,20 +166,20 @@ void TDataMonitor::FillingThread(uint32_t iThread)
   //   std::lock_guard<std::mutex> lock(fThreadMutex);
   //   std::cout << "Thread " << iThread << " started" << std::endl;
   // }
-  std::unique_ptr<std::vector<std::unique_ptr<TEventData>>> localData = nullptr;
+  std::shared_ptr<DAQData_t> localData = nullptr;
   auto counter = 0;
 
   while (fMonitorRunning) {
     {
       std::lock_guard<std::mutex> lock(fDataQueueMutex);
       if (!fDataQueue.empty()) {
-        localData = std::move(fDataQueue.front());
+        localData = fDataQueue.front();
         fDataQueue.pop_front();
         counter++;
       }
     }
 
-    if (localData != nullptr) {
+    if (localData) {
       std::vector<std::vector<bool>> drawFlag(fNMods,
                                               std::vector<bool>(fNChs, false));
       for (const auto &event : *localData) {
@@ -243,7 +243,7 @@ void TDataMonitor::FillingThread(uint32_t iThread)
         }
       }
 
-      localData.reset(nullptr);
+      localData.reset();
     } else {
       std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }

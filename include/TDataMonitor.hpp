@@ -28,7 +28,7 @@ class TDataMonitor
   void StartMonitor();
   void StopMonitor();
 
-  void SetData(DAQData_t data);
+  void SetData(std::shared_ptr<DAQData_t> data);
 
   void ClearHist();
 
@@ -55,7 +55,7 @@ class TDataMonitor
   void RegisterHistCanvas();
 
   bool fMonitorRunning;
-  std::deque<DAQData_t> fDataQueue;
+  std::deque<std::shared_ptr<DAQData_t>> fDataQueue;
   std::mutex fDataQueueMutex;
   std::mutex fThreadMutex;
   std::vector<std::thread> fThreadPool;

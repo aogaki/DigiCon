@@ -203,7 +203,7 @@ void TDigitizer::FetchEventsPSD()
   const auto recLen = static_cast<uint32_t>(std::stoi(buf));
   TEventData eventData(recLen);
   eventData.module = fModNo;
-  std::vector<std::unique_ptr<TEventData>> eventBuffer;
+  std::vector<std::shared_ptr<TEventData>> eventBuffer;
   eventBuffer.reserve(10000);
 
   while (fRunning) {
@@ -217,7 +217,7 @@ void TDigitizer::FetchEventsPSD()
         &eventData.digitalProbe2Type, &eventData.waveformSize,
         &eventData.eventSize);
     if (err == CAEN_FELib_Success && eventData.energy > 0) {
-      eventBuffer.emplace_back(std::make_unique<TEventData>(eventData));
+      eventBuffer.emplace_back(std::make_shared<TEventData>(eventData));
     }
 
     if (eventBuffer.size() > fEventThreshold || err != CAEN_FELib_Success) {
@@ -244,7 +244,7 @@ void TDigitizer::FetchEventsPHA()
   TEventData eventData(recLen);
   eventData.module = fModNo;
   eventData.energyShort = 0;
-  std::vector<std::unique_ptr<TEventData>> eventBuffer;
+  std::vector<std::shared_ptr<TEventData>> eventBuffer;
   eventBuffer.reserve(10000);
 
   while (fRunning) {
@@ -257,7 +257,7 @@ void TDigitizer::FetchEventsPHA()
         eventData.digitalProbe2.data(), &eventData.digitalProbe2Type,
         &eventData.waveformSize, &eventData.eventSize);
     if (err == CAEN_FELib_Success && eventData.energy > 0) {
-      eventBuffer.emplace_back(std::make_unique<TEventData>(eventData));
+      eventBuffer.emplace_back(std::make_shared<TEventData>(eventData));
     }
 
     if (eventBuffer.size() > fEventThreshold || err != CAEN_FELib_Success) {
@@ -285,7 +285,7 @@ void TDigitizer::FetchEventsScope()
   eventData.module = fModNo;
   eventData.energy = 0;
   eventData.energyShort = 0;
-  std::vector<std::unique_ptr<TEventData>> eventBuffer;
+  std::vector<std::shared_ptr<TEventData>> eventBuffer;
   eventBuffer.reserve(10000);
 
   uint64_t timeStamp;
@@ -315,7 +315,7 @@ void TDigitizer::FetchEventsScope()
         eventData.timeStampNs = static_cast<double>(timeStampNs);  // dangerous
         eventData.analogProbe1 =
             std::vector<int16_t>(waveform[iCh], waveform[iCh] + recLen);
-        eventBuffer.emplace_back(std::make_unique<TEventData>(eventData));
+        eventBuffer.emplace_back(std::make_shared<TEventData>(eventData));
       }
     }
 
@@ -340,8 +340,7 @@ void TDigitizer::FetchEventsScope()
   eventBuffer.clear();
 }
 
-std::unique_ptr<std::vector<std::unique_ptr<TEventData>>>
-TDigitizer::GetEvents()
+std::shared_ptr<DAQData_t> TDigitizer::GetEvents()
 {
   std::lock_guard<std::mutex> lock(fEventsDataMutex);
   auto buf = std::move(fEventsVec);
@@ -351,7 +350,7 @@ TDigitizer::GetEvents()
 
 void TDigitizer::MakeNewEventsVec()
 {
-  fEventsVec.reset(new std::vector<std::unique_ptr<TEventData>>);
+  fEventsVec = std::make_shared<DAQData_t>();
   fEventsVec->reserve(1024 * 1024);
 }
 
