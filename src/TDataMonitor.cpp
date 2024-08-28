@@ -186,6 +186,8 @@ void TDataMonitor::FillingThread(uint32_t iThread)
         if (fMonitorRunning == false) break;
         auto mod = event->module;
         auto ch = event->channel;
+        if (mod >= fModAndCh.size() || ch >= fModAndCh[mod]) continue;
+
         fHist[mod][ch]->Fill(event->energy);
 
         if (event->waveformSize > 0) {

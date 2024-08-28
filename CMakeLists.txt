@@ -18,7 +18,7 @@ set(CMAKE_CXX_FLAGS_DEBUG_INIT "-Wall")
 set(CMAKE_CXX_FLAGS_RELEASE_INIT "-Wall")
 
 # Huuuuuge warning options!
-add_compile_options(-O2 -pthread -Wall -Wextra -Wpedantic -Wshadow)
+add_compile_options(-O2 -fopenmp -pthread -Wall -Wextra -Wpedantic -Wshadow)
 
 # ----------------------------------------------------------------------------
 # Locate sources and headers for this project
@@ -44,6 +44,6 @@ file(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cpp)
 # add_executable(digi main.cpp ${headers})
 # target_link_libraries(digi ${ROOT_LIBRARIES} CAENDigitizer CAENComm CAENVME RHTTP TDigiTES)
 add_library(${LIB_NAME} SHARED ${sources} ${headers})
-target_link_libraries(${LIB_NAME} ${ROOT_LIBRARIES} RHTTP CAEN_FELib)
+target_link_libraries(${LIB_NAME} ${ROOT_LIBRARIES} RHTTP CAEN_FELib gomp)
 add_executable(${PROJECT_NAME} main.cpp ${headers})
 target_link_libraries(${PROJECT_NAME} ${LIB_NAME})

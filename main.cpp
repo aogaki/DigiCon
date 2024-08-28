@@ -9,10 +9,13 @@
 #include <chrono>
 #include <iostream>
 #include <memory>
+#include <random>
 
 #include "TDataMonitor.hpp"
+#include "TDataRecorder.hpp"
 #include "TDataTaking.hpp"
 #include "TDigitizer.hpp"
+#include "TEventData.hpp"
 
 enum class AppState { Quit, Reload, Continue };
 
@@ -43,47 +46,99 @@ AppState InputCheck()
   return AppState::Continue;
 }
 
+std::shared_ptr<DAQData_t> GetFakeEvents(uint32_t nEvents = 10000)
+{
+  auto events = std::make_shared<DAQData_t>();
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<uint8_t> modDist(0, 7);
+  std::uniform_int_distribution<uint8_t> chDist(0, 15);
+  std::uniform_int_distribution<uint16_t> energyDist(1, 4095);
+  std::uniform_int_distribution<int16_t> energyShortDist(1, 2047);
+
+  static uint64_t counter = 0;
+
+  for (auto i = 0U; i < nEvents; i++) {
+    auto event = std::make_shared<TEventData>();
+    event->module = modDist(gen);
+    event->channel = chDist(gen);
+    event->timeStampNs = counter++;
+    event->energy = energyDist(gen);
+    event->energyShort = energyShortDist(gen);
+    event->waveformSize = 0;
+    events->push_back(event);
+  }
+
+  return events;
+}
+
 int main(int argc, char *argv[])
 {
   ROOT::EnableThreadSafety();
 
   bool forceTrace = false;
+  bool useTestData = false;
+  // bool useTestData = true;
 
   std::string configList = "configList";
   if (argc > 1) {
-    for (auto i = 1; i < argc - 1; i++) {
+    for (auto i = 1; i < argc; i++) {
       if (std::string(argv[i]) == "-w") {
         forceTrace = true;
+      } else if (std::string(argv[i]) == "-t") {
+        useTestData = true;
       }
     }
 
-    configList = argv[argc - 1];
+    if (std::string(argv[argc - 1]).find('-') == std::string::npos)
+      configList = argv[argc - 1];
   }
 
   auto daq = std::make_unique<TDataTaking>();
-  daq->LoadConfigFileList(configList);
-  daq->OpenDigitizers();
-
-  if (forceTrace) {
-    std::cout << "Trace ON" << std::endl;
-    daq->ForceTrace();
+  if (useTestData == false) {
+    daq->LoadConfigFileList(configList);
+    daq->OpenDigitizers();
+    if (forceTrace) {
+      std::cout << "Trace ON" << std::endl;
+      daq->ForceTrace();
+    }
+    daq->ConfigDigitizers();
   }
-  daq->ConfigDigitizers();
 
   auto monitor = std::make_unique<TDataMonitor>();
-  monitor->LoadChannelConf(daq->GetNumberOfCh());
-  monitor->SetDeltaT(daq->GetDeltaT());
+  if (useTestData) {
+    std::cout << "Using test data" << std::endl;
+    monitor->LoadChannelConf({64, 64, 64, 64, 64, 64, 64, 64});
+    monitor->SetDeltaT({2, 2, 2, 2, 2, 2, 2, 2});
+  } else {
+    monitor->LoadChannelConf(daq->GetNumberOfCh());
+    monitor->SetDeltaT(daq->GetDeltaT());
+  }
   monitor->StartMonitor();
 
-  daq->StartAcquisition();
+  auto recorder = std::make_unique<TDataRecorder>();
+  recorder->SetFileName("test_data");
+  recorder->SetSizeLimit(500 * 1024 * 1024);
+  recorder->SetTimeLimit(30);  // minutes
+  recorder->StartRecording();
+
+  if (useTestData == false) {
+    daq->StartAcquisition();
+  }
 
   auto counter = 0UL;
   auto startTime = std::chrono::high_resolution_clock::now();
   while (true) {
-    auto data = daq->GetData();
+    std::shared_ptr<DAQData_t> data;
+    if (useTestData)
+      data = GetFakeEvents(10000);
+    else
+      data = daq->GetData();
+
     if (data->size() > 0) {
       counter += data->size();
       monitor->SetData(data);
+      recorder->SetData(data);
     }
 
     auto state = InputCheck();
@@ -93,10 +148,12 @@ int main(int argc, char *argv[])
       std::cout << "Reloading configuration files" << std::endl;
       monitor->StopMonitor();
       monitor->ClearHist();
-      daq->StopAcquisition();
-      daq->ConfigDigitizers();
+      if (useTestData == false) {
+        daq->StopAcquisition();
+        daq->ConfigDigitizers();
+        daq->StartAcquisition();
+      }
       monitor->StartMonitor();
-      daq->StartAcquisition();
     }
   }
   auto endTime = std::chrono::high_resolution_clock::now();
@@ -106,9 +163,12 @@ int main(int argc, char *argv[])
   std::cout << "Event rate: " << counter / duration.count() << " Hz"
             << std::endl;
 
+  if (useTestData == false) {
+    daq->StopAcquisition();
+    daq->CloseDigitizers();
+  }
+  recorder->StopRecording();
   monitor->StopMonitor();
-  daq->StopAcquisition();
-  daq->CloseDigitizers();
 
   return 0;
 }

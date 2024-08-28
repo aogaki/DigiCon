@@ -22,7 +22,8 @@ class TDataMonitor
   TDataMonitor();
   ~TDataMonitor();
 
-  void LoadChannelConf(const std::vector<uint32_t> &nChs);
+  void LoadChannelConf(const std::vector<uint32_t> &nChs = {64, 64, 64, 64, 64,
+                                                            64, 64, 64});
   void SetDeltaT(const std::vector<uint32_t> &deltaT) { fDeltaT = deltaT; }
 
   void StartMonitor();

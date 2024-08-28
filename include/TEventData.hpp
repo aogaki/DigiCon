@@ -69,6 +69,7 @@ class TSmallEventData
     timeStampNs = eventData.timeStampNs;
     energy = eventData.energy;
     energyShort = eventData.energyShort;
+    waveform = eventData.waveform;
   };
   ~TSmallEventData() {};
 
@@ -77,6 +78,7 @@ class TSmallEventData
   double timeStampNs;
   uint16_t energy;
   int16_t energyShort;
+  std::vector<int16_t> waveform;
 };
 
 #endif  // TEventData_HPP
