@@ -138,11 +138,11 @@ void TDataTaking::StopAcquisition()
 
 void TDataTaking::ResetEventsVec()
 {
-  fEventsVec.reset(new std::vector<std::shared_ptr<TEventData>>);
+  fEventsVec.reset(new std::vector<std::unique_ptr<TEventData>>);
   fEventsVec->reserve(1024 * 1024);
 }
 
-std::shared_ptr<DAQData_t> TDataTaking::GetData()
+std::unique_ptr<DAQData_t> TDataTaking::GetData()
 {
   std::lock_guard<std::mutex> lock(fEventsVecMutex);
   auto buf = std::move(fEventsVec);
@@ -152,8 +152,8 @@ std::shared_ptr<DAQData_t> TDataTaking::GetData()
 
 void TDataTaking::FetchingData()
 {
-  std::shared_ptr<DAQData_t> localEventsVec;
-  localEventsVec.reset(new std::vector<std::shared_ptr<TEventData>>);
+  std::unique_ptr<DAQData_t> localEventsVec;
+  localEventsVec.reset(new std::vector<std::unique_ptr<TEventData>>);
 
   while (fRunning) {
     for (auto &digitizer : fDigitizers) {

@@ -29,7 +29,7 @@ class TDataTaking
   void StartAcquisition();
   void StopAcquisition();
 
-  std::shared_ptr<DAQData_t> GetData();
+  std::unique_ptr<DAQData_t> GetData();
 
   std::vector<uint32_t> GetNumberOfCh();
   std::vector<uint32_t> GetDeltaT();
@@ -40,7 +40,7 @@ class TDataTaking
   void LoadConfigFiles();
 
   void ResetEventsVec();
-  std::shared_ptr<DAQData_t> fEventsVec;
+  std::unique_ptr<DAQData_t> fEventsVec;
   std::mutex fEventsVecMutex;
 
   bool fRunning = false;

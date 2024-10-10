@@ -29,7 +29,7 @@ class TDigitizer
 
   void SetDataFormat();
 
-  std::shared_ptr<DAQData_t> GetEvents();
+  std::unique_ptr<DAQData_t> GetEvents();
 
   uint32_t GetNumberOfCh();
   uint32_t GetDeltaT();
@@ -44,7 +44,7 @@ class TDigitizer
   std::string fFW;
   int32_t fTimeOut = 100;
 
-  std::shared_ptr<DAQData_t> fEventsVec;
+  std::unique_ptr<DAQData_t> fEventsVec;
   void MakeNewEventsVec();
   std::mutex fEventsDataMutex;
   std::thread fAcquisitionThread;

@@ -56,7 +56,7 @@ class TEventData
   std::size_t waveformSize;
   uint32_t eventSize;
 };
-typedef std::vector<std::shared_ptr<TEventData>> DAQData_t;
+typedef std::vector<std::unique_ptr<TEventData>> DAQData_t;
 
 class TSmallEventData
 {

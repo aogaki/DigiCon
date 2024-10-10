@@ -12,11 +12,11 @@ TDataRecorder::TDataRecorder() { fRecording = false; }
 
 TDataRecorder::~TDataRecorder() { StopRecording(); }
 
-void TDataRecorder::SetData(std::shared_ptr<DAQData_t> &data)
+void TDataRecorder::SetData(std::unique_ptr<DAQData_t> data)
 {
   {
     std::lock_guard<std::mutex> lock(fRawDataQueMutex);
-    fRawDataQue.push_back(data);
+    fRawDataQue.push_back(std::move(data));
   }
 }
 
@@ -37,7 +37,7 @@ void TDataRecorder::SetFileName(const std::string &fileName)
 
 void TDataRecorder::ConvertingThread()
 {
-  std::shared_ptr<DAQData_t> localData = nullptr;
+  std::unique_ptr<DAQData_t> localData = nullptr;
 
   constexpr auto modSize = sizeof(TSmallEventData::module);
   constexpr auto chSize = sizeof(TSmallEventData::channel);
@@ -51,7 +51,7 @@ void TDataRecorder::ConvertingThread()
     {
       std::lock_guard<std::mutex> lock(fRawDataQueMutex);
       if (!fRawDataQue.empty()) {
-        localData = fRawDataQue.front();
+        localData = std::move(fRawDataQue.front());
         fRawDataQue.pop_front();
       }
     }
@@ -216,17 +216,19 @@ void TDataRecorder::PostProcess()
   // NEED refactoring
   // TOO REDUNDANT
 
-  std::shared_ptr<DAQData_t> localRawData = nullptr;
+  std::unique_ptr<DAQData_t> localRawData = nullptr;
   {
     std::lock_guard<std::mutex> lock(fRawDataQueMutex);
     if (!fRawDataQue.empty()) {
       while (true) {
-        auto buf = fRawDataQue.front();
+        auto buf = std::move(fRawDataQue.front());
         fRawDataQue.pop_front();
         if (localRawData == nullptr) {
-          localRawData = buf;
+          localRawData = std::move(buf);
         } else {
-          localRawData->insert(localRawData->end(), buf->begin(), buf->end());
+          localRawData->insert(localRawData->end(),
+                               std::make_move_iterator(buf->begin()),
+                               std::make_move_iterator(buf->end()));
         }
         if (fRawDataQue.empty()) break;
       }

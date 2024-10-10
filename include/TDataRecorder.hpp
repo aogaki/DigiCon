@@ -20,7 +20,7 @@ class TDataRecorder
   void StartRecording();
   void StopRecording();
 
-  void SetData(std::shared_ptr<DAQData_t> &data);
+  void SetData(std::unique_ptr<DAQData_t> data);
   void SetSizeLimit(const uint32_t &maxSize);
   void SetTimeLimit(const uint32_t &minutes);
   void SetFileName(const std::string &fileName);
@@ -36,7 +36,7 @@ class TDataRecorder
   uint32_t fFileVersion;
   std::mutex fFileMutex;
 
-  std::deque<std::shared_ptr<DAQData_t>> fRawDataQue;
+  std::deque<std::unique_ptr<DAQData_t>> fRawDataQue;
   std::mutex fRawDataQueMutex;
 
   std::vector<TSmallEventData *> fDataVec;

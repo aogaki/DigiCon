@@ -150,30 +150,26 @@ void TDataMonitor::RegisterHistCanvas()
   }
 }
 
-void TDataMonitor::SetData(std::shared_ptr<DAQData_t> data)
+void TDataMonitor::SetData(std::unique_ptr<DAQData_t> data)
 {
   {
     std::lock_guard<std::mutex> lock(fDataQueueMutex);
-    fDataQueue.push_back(data);
+    fDataQueue.push_back(std::move(data));
   }
 }
 
-void TDataMonitor::FillingThread(uint32_t iThread)
+void TDataMonitor::FillingThread()
 {
   ROOT::EnableThreadSafety();
 
-  // {
-  //   std::lock_guard<std::mutex> lock(fThreadMutex);
-  //   std::cout << "Thread " << iThread << " started" << std::endl;
-  // }
-  std::shared_ptr<DAQData_t> localData = nullptr;
+  std::unique_ptr<DAQData_t> localData = nullptr;
   auto counter = 0;
 
   while (fMonitorRunning) {
     {
       std::lock_guard<std::mutex> lock(fDataQueueMutex);
       if (!fDataQueue.empty()) {
-        localData = fDataQueue.front();
+        localData = std::move(fDataQueue.front());
         fDataQueue.pop_front();
         counter++;
       }
@@ -250,11 +246,6 @@ void TDataMonitor::FillingThread(uint32_t iThread)
       std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
   }
-
-  // {
-  //   std::lock_guard<std::mutex> lock(fThreadMutex);
-  //   std::cout << "Thread " << iThread << " stopped.  " << counter << std::endl;
-  // }
 }
 
 void TDataMonitor::ROOTThread()
@@ -272,7 +263,7 @@ void TDataMonitor::StartMonitor()
   constexpr uint32_t nThreads = 16;
   fThreadPool.push_back(std::thread(&TDataMonitor::ROOTThread, this));
   for (auto i = 0U; i < nThreads; i++) {
-    fThreadPool.push_back(std::thread(&TDataMonitor::FillingThread, this, i));
+    fThreadPool.push_back(std::thread(&TDataMonitor::FillingThread, this));
   }
 }
 

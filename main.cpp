@@ -46,9 +46,9 @@ AppState InputCheck()
   return AppState::Continue;
 }
 
-std::shared_ptr<DAQData_t> GetFakeEvents(uint32_t nEvents = 10000)
+std::unique_ptr<DAQData_t> GetFakeEvents(uint32_t nEvents = 10000)
 {
-  auto events = std::make_shared<DAQData_t>();
+  auto events = std::make_unique<DAQData_t>();
   std::random_device rd;
   std::mt19937 gen(rd());
   std::uniform_int_distribution<uint8_t> modDist(0, 7);
@@ -59,14 +59,14 @@ std::shared_ptr<DAQData_t> GetFakeEvents(uint32_t nEvents = 10000)
   static uint64_t counter = 0;
 
   for (auto i = 0U; i < nEvents; i++) {
-    auto event = std::make_shared<TEventData>();
+    auto event = std::make_unique<TEventData>();
     event->module = modDist(gen);
     event->channel = chDist(gen);
     event->timeStampNs = counter++;
     event->energy = energyDist(gen);
     event->energyShort = energyShortDist(gen);
     event->waveformSize = 0;
-    events->push_back(event);
+    events->push_back(std::move(event));
   }
 
   return events;
@@ -129,16 +129,27 @@ int main(int argc, char *argv[])
   auto counter = 0UL;
   auto startTime = std::chrono::high_resolution_clock::now();
   while (true) {
-    std::shared_ptr<DAQData_t> data;
+    std::unique_ptr<DAQData_t> data;
     if (useTestData)
-      data = GetFakeEvents(10000);
+      data = std::move(GetFakeEvents(10000));
     else
-      data = daq->GetData();
+      data = std::move(daq->GetData());
 
     if (data->size() > 0) {
       counter += data->size();
-      monitor->SetData(data);
-      recorder->SetData(data);
+      auto copyData = std::make_unique<DAQData_t>();
+      for (auto &event : *data) {
+        auto copyEvent = std::make_unique<TEventData>();
+        copyEvent->module = event->module;
+        copyEvent->channel = event->channel;
+        copyEvent->timeStampNs = event->timeStampNs;
+        copyEvent->energy = event->energy;
+        copyEvent->energyShort = event->energyShort;
+        copyEvent->waveformSize = event->waveformSize;
+        copyData->push_back(std::move(copyEvent));
+      }
+      monitor->SetData(std::move(data));
+      recorder->SetData(std::move(copyData));
     }
 
     auto state = InputCheck();
@@ -157,10 +168,10 @@ int main(int argc, char *argv[])
     }
   }
   auto endTime = std::chrono::high_resolution_clock::now();
-  auto duration =
-      std::chrono::duration_cast<std::chrono::seconds>(endTime - startTime);
-  std::cout << "Total time: " << duration.count() << " s" << std::endl;
-  std::cout << "Event rate: " << counter / duration.count() << " Hz"
+  auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(
+      endTime - startTime);
+  std::cout << "Total time: " << duration.count() / 1000. << " s" << std::endl;
+  std::cout << "Event rate: " << counter / (duration.count() / 1000.) << " Hz"
             << std::endl;
 
   if (useTestData == false) {
