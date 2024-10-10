@@ -425,12 +425,18 @@ void convert_json()
 
   auto inputJSON = nlohmann::json::parse(jsonStr);
   std::string FW = inputJSON["par"]["fwtype"]["value"];
+  if (FW == "DPP-PSD")
+    FW = "PSD";
+  else if (FW == "DPP-PHA")
+    FW = "PHA";
+  else if (FW == "DPP-SCOPE")
+    FW = "SCOPE";
 
   nlohmann::json parameters;
   parameters["ModuleID"] = "0";
-  parameters["FW"] = inputJSON["par"]["fwtype"]["value"];
+  parameters["FW"] = FW;
   parameters["SN"] = inputJSON["par"]["serialnum"]["value"];
-  parameters["URL"] = "dig1://caen.internal/usb?link_num=0";
+  parameters["URL"] = link;
 
   parameters["module_parameters"] = GetBrdParameters(inputJSON);
   parameters["channel_parameters"] = GetChParameters(inputJSON);
